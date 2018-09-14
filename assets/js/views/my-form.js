@@ -32,8 +32,12 @@ define([
         that.$el.append(snippet);
       });
       $("#render").val(that.renderForm({
-        multipart: this.collection.containsFileType(),
-        text: _.map(this.collection.renderAllClean(), function(e){return e.html()}).join("\n")
+          multipart: this.collection.containsFileType(),
+          text: _.map(
+	      this.collection.renderAll(),
+	      function(e){
+		//  console.log("info "+ e[0].attributes.getNamedItem("json-content").nodeValue)
+	          return e[0].attributes.getNamedItem("json-content").nodeValue}).join("\n")
       }));
       this.$el.appendTo("#build form");
       this.delegateEvents();

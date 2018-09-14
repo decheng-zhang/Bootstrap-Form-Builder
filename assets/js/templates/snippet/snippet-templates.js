@@ -1,5 +1,7 @@
 define(function(require) {
-  var formname               = require('text!templates/snippet/formname.html')
+    var formname               = require('text!templates/snippet/formname.html')
+    , n2mandatory               = require('text!templates/snippet/n2schemamandatory.json')
+    , n2mandatoryhtml        = require('text!templates/snippet/n2schemamandatory.html')
   , prependedtext            = require('text!templates/snippet/prependedtext.html')
   , search                   = require('text!templates/snippet/searchinput.html')
   , textinput                = require('text!templates/snippet/textinput.html')
@@ -23,7 +25,9 @@ define(function(require) {
   , textinput                = require('text!templates/snippet/textinput.html');
 
   return {
-    formname                   : formname
+      formname                   : formname
+      , n2schemamandatory        : n2mandatory
+      , n2schemamandatoryhtml : n2mandatoryhtml
     , prependedtext            : prependedtext
     , search                   : search
     , textinput                : textinput

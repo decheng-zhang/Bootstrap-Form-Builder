@@ -6,7 +6,7 @@ define([
   , "text!templates/popover/popover-textarea.html"
   , "text!templates/popover/popover-textarea-split.html"
   , "text!templates/popover/popover-checkbox.html"
-  , "templates/snippet/snippet-templates"
+    , "templates/snippet/snippet-templates" 
   , "bootstrap"
 ], function(
   $, _, Backbone
@@ -22,7 +22,7 @@ define([
     tagName: "div"
     , className: "component" 
     , initialize: function(){
-      this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()])
+      this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()+ "html"])
       this.popoverTemplates = {
         "input" : _.template(_PopoverInput)
         , "select" : _.template(_PopoverSelect)
@@ -38,11 +38,15 @@ define([
         "items" : that.model.get("fields"),
         "popoverTemplates": that.popoverTemplates
       });
-      if (withAttributes) {
+	var jsonContent =  _.template(_snippetTemplates[this.model.idFriendlyTitle()])(that.model.getValues());
+	
+	
+	if (withAttributes) {
         return this.$el.html(
-          that.template(that.model.getValues())
+            that.template(that.model.getValues())
         ).attr({
-          "data-content"     : content
+           "data-content"     : content
+         ,"json-content"    : jsonContent
           , "data-title"     : that.model.get("title")
           , "data-trigger"   : "manual"
           , "data-html"      : true

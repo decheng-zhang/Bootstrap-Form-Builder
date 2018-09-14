@@ -17,7 +17,7 @@ define([
     }
     , className: "temp"
     , render: function() {
-      return this.$el.html(this.tempTemplate({text: this.constructor.__super__.render.call(this).html()}));
+	 return this.$el.html(this.tempTemplate({text: this.constructor.__super__.render.call(this).html()}));
     }
     , postRender: function(mouseEvent){
       this.tempForm  = this.$el.find("form")[0];
