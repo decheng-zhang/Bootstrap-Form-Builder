@@ -22,11 +22,12 @@ define([
       new TabView({
         title: "Radios / Checkboxes"
         , collection: new SnippetsCollection(JSON.parse(radioJSON))
-      });
+      });*/
       new TabView({
         title: "Select"
         , collection: new SnippetsCollection(JSON.parse(selectJSON))
-      });
+       });
+	/*
       new TabView({
         title: "Buttons"
         , collection: new SnippetsCollection(JSON.parse(buttonsJSON))
