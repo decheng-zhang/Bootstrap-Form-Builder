@@ -1,0 +1,32 @@
+[
+  {
+    "title": "n2 schema mandatory",
+    "fields": {
+      "group": {
+        "label": "Group",
+        "type": "input",
+        "value": "groupId"
+      },
+      "id": {
+        "label": "Id",
+        "type": "input",
+        "value": "Id"
+      },
+      "label": {
+        "label": "Label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute list",
+    "fields": {
+      "name": {
+        "label": "Attributes",
+        "type": "string",
+        "value": "attr"
+      }
+    }
+  }
+]

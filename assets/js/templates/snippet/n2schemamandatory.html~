@@ -1,0 +1,4 @@
+<!-- n2_mandatory_part-->
+    "group": "%- group %",
+    "id": "%- id %",
+    "label": "%- label %"
