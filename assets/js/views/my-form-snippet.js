@@ -24,7 +24,9 @@ define([
       $(".popover #save").on("click", this.saveHandler(that));
       $(".popover #cancel").on("click", this.cancelHandler(that));
       //add drag event for all but form name
-      if(this.model.get("title") !== "Form Name"){
+	if(this.model.get("title") !== "n2 schema mandatory" &&
+	   this.model.get("title") !== "n2 attribute list"
+	  ){
         $("body").on("mousemove", function(mouseMoveEvent){
           if(
             Math.abs(mouseDownEvent.pageX - mouseMoveEvent.pageX) > 10 ||

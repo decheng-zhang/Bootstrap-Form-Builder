@@ -1,0 +1,21 @@
+<!-- n2 attribute string -->
+<div class="control-group">
+  <% var thisId = label.replace(/\W/g, '').toLowerCase(); console.log("thisId: is ", thisId) %>
+  <label class="control-label" for="<%- thisId %>"><%- type.charAt(0).toUpperCase() + type.substr(1)  %></label>
+  
+  <div class="controls">
+    <% if(typeof thisId !== "undefined"){ %>
+    <input
+       id = "<%- thisId  %>"
+       name = "<%- thisId %>"
+       type = "text"
+       value = "<%- label %>"
+       />
+      <% } %>
+    
+  
+    
+  </div>
+</div>
+
+

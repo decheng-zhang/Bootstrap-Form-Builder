@@ -23,7 +23,8 @@ define([
   return Backbone.View.extend({
     tagName: "div"
     , className: "component" 
-    , initialize: function(){
+      , initialize: function(){
+	  console.log("this one has problem: ", this.model.idFriendlyTitle()+"html")
       this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()+ "html"])
       this.popoverTemplates = {
         "input" : _.template(_PopoverInput)

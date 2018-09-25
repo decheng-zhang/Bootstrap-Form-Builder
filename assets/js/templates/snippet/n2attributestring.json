@@ -1,0 +1,4 @@
+    "type" : "<%- type %>",
+    "label" : "<%- label %>",
+    "id" : "<%- id %>",
+    "includedInBrief" : <%- includedInBrief %>

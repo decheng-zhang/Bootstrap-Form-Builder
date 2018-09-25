@@ -31,14 +31,40 @@ define([
       _.each(this.collection.renderAll(), function(snippet){
         that.$el.append(snippet);
       });
+	var partitedEleMandatory = _.filter(this.collection.renderAll(), function(e){
+	    if(e[0].attributes.getNamedItem("data-title").nodeValue
+		=== "n2 schema mandatory")
+	    {
+		return true;
+	    }
+	    else {
+		return false;
+	    }
+	} )
+	var partitedEleAttribute  = _.reject(this.collection.renderAll(), function(e){
+
+	    if( (e[0].attributes.getNamedItem("data-title").nodeValue
+		 === "n2 schema mandatory") ||
+		(e[0].attributes.getNamedItem("data-title").nodeValue
+		=== "n2 attribute list"))
+	    {
+		return true;
+	    }
+	    else {
+		return false;
+	    }
+	} )
+
       $("#render").val(that.renderForm({
           multipart: this.collection.containsFileType(),
-          text: _.map(
-	      this.collection.renderAll(),
+	  mandatorytext: _.map( partitedEleMandatory, function(e){
+	      return e[0].attributes.getNamedItem("json-content").nodeValue}).join("\n"),
+	  attributestext: _.map(
+	      partitedEleAttribute, 
 	      function(e){
-		//  console.log("info "+ e[0].attributes.getNamedItem("json-content").nodeValue)
-	          return e[0].attributes.getNamedItem("json-content").nodeValue}).join("\n")
-      }));
+		  return "{\n" + e[0].attributes.getNamedItem("json-content").nodeValue+ "    }"}).join()
+      }
+			));
       this.$el.appendTo("#build form");
       this.delegateEvents();
     }

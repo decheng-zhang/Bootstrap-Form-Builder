@@ -1,3 +1,8 @@
 {
-<%= text %>
+<%= mandatorytext %>
+<% if (attributestext.length > 1) { %>
+    ,"attributes": [
+    <%= attributestext %>
+   ]
+ <%  } %>
 }
