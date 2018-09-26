@@ -24,17 +24,17 @@ define([
     tagName: "div"
     , className: "component" 
       , initialize: function(){
-	  console.log("this one has problem: ", this.model.idFriendlyTitle()+"html")
-      this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()+ "html"])
-      this.popoverTemplates = {
-        "input" : _.template(_PopoverInput)
-        , "select" : _.template(_PopoverSelect)
-        , "textarea" : _.template(_PopoverTextArea)
-        , "textarea-split" : _.template(_PopoverTextAreaSplit)
-          , "checkbox" : _.template(_PopoverCheckbox)
-	  ,"string" : _.template(_PopoverString)
+	  console.log("which two problem: " , this.model.idFriendlyTitle() + "html")
+	  this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()+ "html"])
+	  this.popoverTemplates = {
+              "input" : _.template(_PopoverInput)
+              , "select" : _.template(_PopoverSelect)
+              , "textarea" : _.template(_PopoverTextArea)
+              , "textarea-split" : _.template(_PopoverTextAreaSplit)
+              , "checkbox" : _.template(_PopoverCheckbox)
+	      ,"string" : _.template(_PopoverString)
+	  }
       }
-    }
     , render: function(withAttributes){
       var that = this;
       var content = _.template(_PopoverMain)({
@@ -42,11 +42,10 @@ define([
         "items" : that.model.get("fields"),
         "popoverTemplates": that.popoverTemplates
       });
+	console.log("which one problem: " , this.model.idFriendlyTitle())
 	var jsonContent =  _.template(_snippetTemplates[this.model.idFriendlyTitle()])(that.model.getValues());
-	
-	
 	if (withAttributes) {
-        return this.$el.html(
+            return this.$el.html(
             that.template(that.model.getValues())
         ).attr({
            "data-content"     : content

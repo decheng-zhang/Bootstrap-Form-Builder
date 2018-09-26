@@ -1,4 +1,4 @@
     "type" : "<%- type %>",
     "label" : "<%- label %>",
-    "id" : "<%- id %>",
+    "id" : "<%- n2id %>",
     "includedInBrief" : <%- includedInBrief %>

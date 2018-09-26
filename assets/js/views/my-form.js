@@ -59,8 +59,7 @@ define([
           multipart: this.collection.containsFileType(),
 	  mandatorytext: _.map( partitedEleMandatory, function(e){
 	      return e[0].attributes.getNamedItem("json-content").nodeValue}).join("\n"),
-	  attributestext: _.map(
-	      partitedEleAttribute, 
+	  attributestext: _.map( partitedEleAttribute, 
 	      function(e){
 		  return "{\n" + e[0].attributes.getNamedItem("json-content").nodeValue+ "    }"}).join()
       }

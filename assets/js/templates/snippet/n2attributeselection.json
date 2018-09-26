@@ -1,0 +1,12 @@
+"type": "<%- type %>"
+,"id"  : "<%- n2id %>"
+,"label" : "<%- label %>"
+,"options" : [
+	<% _.each(options, function(option, idx, list) { %>
+	      {
+		  "label": "<% option %>"
+		  "value": "<% option %>"
+	      }
+		      <% if(idx !== list.length)  { %> ,  <% } %>
+	 <% } %>
+    ]
