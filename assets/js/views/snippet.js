@@ -24,7 +24,7 @@ define([
     tagName: "div"
     , className: "component" 
       , initialize: function(){
-	  console.log("which two problem: " , this.model.idFriendlyTitle() + "html")
+	 // console.log("which two problem: " , this.model.idFriendlyTitle() + "html")
 	  this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()+ "html"])
 	  this.popoverTemplates = {
               "input" : _.template(_PopoverInput)
@@ -42,14 +42,15 @@ define([
         "items" : that.model.get("fields"),
         "popoverTemplates": that.popoverTemplates
       });
-	console.log("which one problem: " , this.model.idFriendlyTitle())
-	var jsonContent =  _.template(_snippetTemplates[this.model.idFriendlyTitle()])(that.model.getValues());
+	//console.log("which one problem: " , this.model.idFriendlyTitle())
+	
 	if (withAttributes) {
+	    var jsonContent =  _.template(_snippetTemplates[this.model.idFriendlyTitle()])(that.model.getValues());
             return this.$el.html(
             that.template(that.model.getValues())
         ).attr({
-           "data-content"     : content
-         ,"json-content"    : jsonContent
+           "data-content"    : content
+          , "json-content"   : jsonContent
           , "data-title"     : that.model.get("title")
           , "data-trigger"   : "manual"
           , "data-html"      : true
