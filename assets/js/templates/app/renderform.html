@@ -2,7 +2,7 @@
 <%= mandatorytext %>
 <% if (attributestext.length > 1) { %>
     ,"attributes": [
-    <%= attributestext %>
+      <% var tempAttributestext = attributestext.replace(/^/gm, '    ') %><%= tempAttributestext %>
    ]
  <%  } %>
 }

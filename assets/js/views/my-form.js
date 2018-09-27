@@ -61,7 +61,7 @@ define([
 	      return e[0].attributes.getNamedItem("json-content").nodeValue}).join("\n"),
 	  attributestext: _.map( partitedEleAttribute, 
 	      function(e){
-		  return "{\n" + e[0].attributes.getNamedItem("json-content").nodeValue+ "    }"}).join()
+		  return " {\n" + e[0].attributes.getNamedItem("json-content").nodeValue.replace(/^/gm, '        ')+ "   }"}).join()
       }
 			));
       this.$el.appendTo("#build form");
