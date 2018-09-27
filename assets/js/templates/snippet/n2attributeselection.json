@@ -1,12 +1,9 @@
-"type": "<%- type %>"
-,"id"  : "<%- n2id %>"
-,"label" : "<%- label %>"
-,"options" : [
-	<% _.each(options, function(option, idx, list) { %>
+    "type" : "<%- type %>"
+    ,"id"  : "<%- n2id %>"
+    ,"label" : "<%- label %>"
+    ,"options" : [<% _.each(options, function(option, idx, list) { %>
 	      {
-		  "label": "<% option %>"
-		  "value": "<% option %>"
-	      }
-		      <% if(idx !== list.length)  { %> ,  <% } %>
-	 <% } %>
+		  "label": "<%- option %>"
+		  "value": "<%- option.toLowerCase() %>"
+	      }<% if(idx !== list.length-1)  { %>,<% } %> <% }) %>
     ]

@@ -21,7 +21,7 @@ define([
         return;
       }
       snippet.set("fresh", false);
-      var snippetType = snippet.attributes.fields.id.value;
+      var snippetType = snippet.attributes.fields.type.value;
 
       if(typeof this.counter[snippetType] === "undefined") {
         this.counter[snippetType] = 0;
@@ -29,7 +29,7 @@ define([
         this.counter[snippetType] += 1;
       }
 
-      snippet.setField("id", snippetType + "-" + this.counter[snippetType]);
+      snippet.setField("n2id", "nunaliit-" + snippetType + "-" + this.counter[snippetType]);
 
       if(typeof snippet.get("fields")["id2"] !== "undefined") {
         snippet.setField("id2", snippetType + "2-" + this.counter[snippetType]);
