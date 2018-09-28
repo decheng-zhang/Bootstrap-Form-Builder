@@ -5,7 +5,15 @@
       <% return str + popoverTemplates[v["type"]](v); %>
     <% }, "") %>
     <%= compiled %>
+    <button type="button" class="btn btn-info" data-toggle="collapse" aria-pressed="false" href="#optional">
+      Optional
+    </button>
+    <div id = "optional" class="collapse">
+      Woola
+    </div>
     <hr/>
+
+    
     <button id="save" class='btn btn-info'>Save</button><button id="cancel" class='btn btn-danger'>Cancel</button>
   </div>
 </form>

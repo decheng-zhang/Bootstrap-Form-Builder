@@ -11,6 +11,8 @@ define(function(require) {
     , n2attributestringhtml = require('text!templates/snippet/n2attributestring.html')
     , n2attributeselection = require('text!templates/snippet/n2attributeselection.json')
     , n2attributeselectionhtml = require('text!templates/snippet/n2attributeselection.html')
+    , n2attributereference = require('text!templates/snippet/n2attributereference.json')
+    , n2attributereferencehtml = require('text!templates/snippet/n2attributereference.html')
   return {
       formname                   : formname
       , n2schemamandatory        : n2mandatory
@@ -23,5 +25,7 @@ define(function(require) {
       , n2attributestringhtml : n2attributestringhtml
       , n2attributeselection : n2attributeselection
       , n2attributeselectionhtml : n2attributeselectionhtml
+      , n2attributereference : n2attributereference
+      , n2attributereferencehtml : n2attributereferencehtml
   }
 });
