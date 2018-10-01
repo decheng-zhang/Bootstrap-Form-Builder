@@ -15,8 +15,8 @@ define(function(require) {
     , n2attributereferencehtml = require('text!templates/snippet/n2attributereference.html')
   return {
       formname                   : formname
-      , n2schemamandatory        : n2mandatory
-      , n2schemamandatoryhtml    : n2mandatoryhtml
+      , n2schemainfo        : n2mandatory
+      , n2schemainfohtml    : n2mandatoryhtml
       , n2attributelist        : n2attributelist
       , n2attributelisthtml    : n2attributelisthtml
       , n2attributetitlehtml  : n2attributetitlehtml

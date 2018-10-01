@@ -1,19 +1,36 @@
 <form class='form'>
   <div class='controls'>
-    <% var compiled =  _.reduce(items, function(str, v, k){ %>
-      <% v["name"] = k; %>
-      <% return str + popoverTemplates[v["type"]](v); %>
-    <% }, "") %>
-    <%= compiled %>
-    <button type="button" class="btn btn-info" data-toggle="collapse" aria-pressed="false" href="#optional">
-      Optional
-    </button>
-    <div id = "optional" class="collapse">
-      Woola
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#first" data-toggle="tab">Major</a><li>
+      <li><a href="#second" data-toggle="tab">Optional</a></li>
+      <li><a href="#third" data-toggle="tab">Custom</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="first">
+	<% var compiled =  _.reduce(items, function(str, v, k){ %>
+	<% v["name"] = k; %>
+	<% if(typeof v["priority"] === "undefined" ) { %>
+	<%  return str + popoverTemplates[v["type"]](v); %>
+	<% } else { %>
+	<%  return str; } %>
+	<% }, "") %>
+	<%= compiled %>
+      </div>
+      <div class="tab-pane" id="second">
+	<% var optcompiled =  _.reduce(items, function(str, v, k){ %>
+	<% v["name"] = k; %>
+	<% if(typeof v["priority"] !== "undefined" && v["priority"] === "optional") { %>
+	<%  return str + popoverTemplates[v["type"]](v); %>
+	<% } else { %>
+	<%  return str; } %>
+	<% }, "") %>
+	<%= optcompiled %>
+      </div>
+      <div class="tab-pane" id="third">
+	custom
+      </div>
     </div>
     <hr/>
-
-    
     <button id="save" class='btn btn-info'>Save</button><button id="cancel" class='btn btn-danger'>Cancel</button>
   </div>
 </form>

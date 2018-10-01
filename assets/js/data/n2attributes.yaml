@@ -1,0 +1,113 @@
+-
+  title : n2 attribute title
+  fields:
+    type:
+      label : type
+      type  : string
+      value  : title
+    n2id:
+      label : id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Text for Title
+-
+  title : n2 attribute string
+  fields:
+    type:
+      label : type
+      type  : string
+      value  : string
+    n2id:
+      label : id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Text for String
+-
+  title : n2 attribute selection
+  fields:
+    type:
+      label : type
+      type  : string
+      value : selection
+    n2id:
+      label : id
+      type  : string
+      value : id
+    label:
+      label : label
+      type  : input
+      value : Text for Selection
+    options:
+      label : Options
+      type  : textarea-split
+      value : ["City","Village"]
+-
+  title : n2 attribute reference
+  fields:
+    type:
+      label : type
+      type  : string
+      value : reference
+    n2id:
+      label : id
+      type  : string
+      value : id
+    label:
+      label : Label
+      type  : input
+      value : Search Function
+    searchFunction:
+      label : Search Function
+      type  : select
+      value :
+          -
+            value: getDocumentId
+            label: getDocumentId
+            selected: true
+          -
+            value: getDocumentFromSchema
+            label: getDocumentFromSchema
+            selected: false
+          -
+            value: getDocumentFromLayer
+            label: getDocumentFromLayer
+            selected: false
+          -
+            value: getLayers
+            label: getLayers
+            selected: false
+          -
+            value: getRelatedMedia
+            label: getRelatedMedia
+            selected: false
+          -
+            value: getRelatedImage
+            label: getRelatedImage
+            selected: false
+          -
+            value: getRelatedAudio
+            label: getRelatedAudio
+            selected: false
+          -
+            value: getRelatedVideo
+            label: getRelatedVideo
+            selected: false
+          -
+            value: getHoverSound
+            label: getHoverSound
+            selected: false
+          -
+            value: customSearchFunction
+            label: customSearchFunction
+            selected: false
+    customField:
+      label : Custom Field
+      type  : input
+      value : <schema-name|layer-id>|<custom-func>
+      hide : true

@@ -10,7 +10,7 @@ define([
         if (v["type"] == "select") {
           o[k] = _.find(v["value"], function(o){return o.selected})["value"];
         } else {
-          o[k]  = v["value"];
+          o[k] = v["value"];
         }
         return o;
       }, {});
@@ -24,9 +24,9 @@ define([
       this.set("fields", fields);
     }
      , mergeField: function(snippet){
-	  var fields = this.get("fields")
+	 var fields = this.get("fields")
 	 var thatFields = snippet.get("fields")
-	  this.set("fields", _.extend(fields, thatFields))
+	 this.set("fields", _.extend(fields, thatFields))
 
       }
      

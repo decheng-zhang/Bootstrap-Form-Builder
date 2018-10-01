@@ -1,6 +1,6 @@
 [
   {
-    "title": "n2 schema mandatory",
+    "title": "n2 schema info",
     "fields": {
       "group": {
         "label": "Group",
@@ -16,16 +16,6 @@
         "label": "Label",
         "type": "input",
         "value": "Label"
-      }
-    }
-  },
-  {
-    "title": "n2 attribute list",
-    "fields": {
-      "name": {
-        "label": "Attributes",
-        "type": "string",
-        "value": "attr"
       }
     }
   }

@@ -33,7 +33,7 @@ define([
       });
 	var partitedEleMandatory = _.filter(this.collection.renderAll(), function(e){
 	    if(e[0].attributes.getNamedItem("data-title").nodeValue
-		=== "n2 schema mandatory")
+		=== "n2 schema info")
 	    {
 		return true;
 	    }
@@ -44,9 +44,7 @@ define([
 	var partitedEleAttribute  = _.reject(this.collection.renderAll(), function(e){
 
 	    if( (e[0].attributes.getNamedItem("data-title").nodeValue
-		 === "n2 schema mandatory") ||
-		(e[0].attributes.getNamedItem("data-title").nodeValue
-		=== "n2 attribute list"))
+		 === "n2 schema info") )
 	    {
 		return true;
 	    }
