@@ -2,11 +2,14 @@
 
 <br/>
 <div class="control-group" display="inline-block">
-  <label class="control-label" for="key_group">Group</label>
+ 
+  <label class="control-label" for="group">Group</label>
   <div class="controls">
-    <input id="key_group"
+    <input id="group"
+           class="input-large field"
+	 name = "<%- 'group-'+id %>"
 	value="<%- group %>"
-    	type="text"
+    	type="info-input"
     />
 
   </div>
@@ -14,17 +17,21 @@
 
   <label class="control-label" for="id">Id</label>
   <div class="controls">
-    <input id="key_id"
+    <input id="id"
+	   class="input-large field"
+	   name = "<%- 'id-'+id %>"
     	value="<%- id %>"
-    	type="text"
+    	type="info-input"
     />
 
   </div>
   <label class="control-label" for="label">Label</label>
   <div class="controls">
-    <input id="key_label"
+    <input id="label"
+	   class="input-large field"
+	   name="<%- 'label-'+id %>"
     	value="<%- label %>"
-    	type="text"
+    	type="info-input"
     />
 
   </div>

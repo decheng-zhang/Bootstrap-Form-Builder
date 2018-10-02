@@ -24,7 +24,7 @@ define([
 	      this.$el.popover("show");
 	      $(".popover #save").on("click", this.saveHandler(that));
 	      $(".popover #cancel").on("click", this.cancelHandler(that));
-	      //add drag event for all but form name
+	      
 
               $("body").on("mousemove", function(mouseMoveEvent){
 		  if(
@@ -37,8 +37,9 @@ define([
 		  };
               });
 	  } else {
+	      // for schema profile info
 	      var that = this;
-	      $("key_group").on("change", this.saveHandler(that));
+	      $(".field").on("change", this.saveHandlerForInfo(that));
 
 	  }
     }
@@ -51,8 +52,20 @@ define([
     , mouseUpHandler : function(mouseUpEvent) {
         $("body").off("mousemove");
     }
-    , savaHandlerForInfo : function(boundContext) {
-	return function(
+    , saveHandlerForInfo : function(boundContext) {
+	return function(e) {
+	    e.preventDefault();
+	    var fields = $(".field");
+	    _.each(fields, function(ele) {
+		var $ele = $(ele)
+		, type = $ele.attr("type")
+		, name = $ele.attr("id");
+		if( type === "info-input"){
+		    boundContext.model.setField(name, $ele.val());
+		}
+	    });
+	    boundContext.model.trigger("change");
+	}
 
     }
 
