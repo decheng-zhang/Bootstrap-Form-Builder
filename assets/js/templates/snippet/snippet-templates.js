@@ -13,6 +13,10 @@ define(function(require) {
     , n2attributeselectionhtml = require('text!templates/snippet/n2attributeselection.html')
     , n2attributereference = require('text!templates/snippet/n2attributereference.json')
     , n2attributereferencehtml = require('text!templates/snippet/n2attributereference.html')
+    , n2attributecheckbox = require('text!templates/snippet/n2attributecheckbox.json')
+    , n2attributecheckboxhtml = require('text!templates/snippet/n2attributecheckbox.html')
+    , n2attributecheckboxgroup = require('text!templates/snippet/n2attributecheckboxgroup.json')
+    , n2attributecheckboxgrouphtml = require('text!templates/snippet/n2attributecheckboxgroup.html')
   return {
       formname                   : formname
       , n2schemainfo        : n2mandatory
@@ -27,5 +31,9 @@ define(function(require) {
       , n2attributeselectionhtml : n2attributeselectionhtml
       , n2attributereference : n2attributereference
       , n2attributereferencehtml : n2attributereferencehtml
+      , n2attributecheckbox   : n2attributecheckbox
+      , n2attributecheckboxhtml : n2attributecheckboxhtml
+      , n2attributecheckboxgroup : n2attributecheckboxgroup
+      , n2attributecheckboxgrouphtml : n2attributecheckboxgrouphtml
   }
 });
