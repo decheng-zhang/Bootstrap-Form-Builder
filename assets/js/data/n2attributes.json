@@ -196,5 +196,51 @@
         "hide": true
       }
     }
+  },
+  {
+    "title": "n2 attribute array",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "array"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "Label",
+        "type": "input",
+        "value": "Label for Array"
+      },
+      "elementType": {
+        "label": "Element Type",
+        "type": "select",
+        "value": [
+          {
+            "value": "string",
+            "label": "string",
+            "selected": true
+          },
+          {
+            "value": "localized",
+            "label": "localized",
+            "selected": false
+          },
+          {
+            "value": "date",
+            "label": "date",
+            "selected": false
+          },
+          {
+            "value": "reference",
+            "label": "reference",
+            "selected": false
+          }
+        ]
+      }
+    }
   }
 ]

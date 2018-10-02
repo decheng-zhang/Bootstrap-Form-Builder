@@ -14,28 +14,33 @@ define([
       , "mouseup"   : "mouseUpHandler"
     }
 
-    , mouseDownHandler : function(mouseDownEvent){
-      mouseDownEvent.stopPropagation();
-      mouseDownEvent.preventDefault();
-      var that = this;
-      //popover
-      $(".popover").remove();
-      this.$el.popover("show");
-      $(".popover #save").on("click", this.saveHandler(that));
-      $(".popover #cancel").on("click", this.cancelHandler(that));
-      //add drag event for all but form name
-	if(this.model.get("title") !== "n2 schema info"){
-        $("body").on("mousemove", function(mouseMoveEvent){
-          if(
-            Math.abs(mouseDownEvent.pageX - mouseMoveEvent.pageX) > 10 ||
-            Math.abs(mouseDownEvent.pageY - mouseMoveEvent.pageY) > 10
-          ){
-            that.$el.popover('destroy');
-            PubSub.trigger("mySnippetDrag", mouseDownEvent, that.model);
-            that.mouseUpHandler();
-          };
-        });
-      }
+      , mouseDownHandler : function(mouseDownEvent){
+	  if(this.model.get("title") !== "n2 schema info"){
+	      mouseDownEvent.stopPropagation();
+	      mouseDownEvent.preventDefault();
+	      var that = this;
+	      //popover
+	      $(".popover").remove();
+	      this.$el.popover("show");
+	      $(".popover #save").on("click", this.saveHandler(that));
+	      $(".popover #cancel").on("click", this.cancelHandler(that));
+	      //add drag event for all but form name
+
+              $("body").on("mousemove", function(mouseMoveEvent){
+		  if(
+		      Math.abs(mouseDownEvent.pageX - mouseMoveEvent.pageX) > 10 ||
+			  Math.abs(mouseDownEvent.pageY - mouseMoveEvent.pageY) > 10
+		  ){
+		      that.$el.popover('destroy');
+		      PubSub.trigger("mySnippetDrag", mouseDownEvent, that.model);
+		      that.mouseUpHandler();
+		  };
+              });
+	  } else {
+	      var that = this;
+	      $("key_group").on("change", this.saveHandler(that));
+
+	  }
     }
 
     , preventPropagation: function(e) {
@@ -45,6 +50,10 @@ define([
 
     , mouseUpHandler : function(mouseUpEvent) {
         $("body").off("mousemove");
+    }
+    , savaHandlerForInfo : function(boundContext) {
+	return function(
+
     }
 
     , saveHandler : function(boundContext) {

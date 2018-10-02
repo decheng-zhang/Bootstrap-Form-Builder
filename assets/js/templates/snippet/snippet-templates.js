@@ -17,6 +17,8 @@ define(function(require) {
     , n2attributecheckboxhtml = require('text!templates/snippet/n2attributecheckbox.html')
     , n2attributecheckboxgroup = require('text!templates/snippet/n2attributecheckboxgroup.json')
     , n2attributecheckboxgrouphtml = require('text!templates/snippet/n2attributecheckboxgroup.html')
+    , n2attributearray = require('text!templates/snippet/n2attributearray.json')
+    , n2attributearrayhtml = require('text!templates/snippet/n2attributearray.html')
   return {
       formname                   : formname
       , n2schemainfo        : n2mandatory
@@ -35,5 +37,7 @@ define(function(require) {
       , n2attributecheckboxhtml : n2attributecheckboxhtml
       , n2attributecheckboxgroup : n2attributecheckboxgroup
       , n2attributecheckboxgrouphtml : n2attributecheckboxgrouphtml
+      , n2attributearray : n2attributearray
+      , n2attributearrayhtml : n2attributearrayhtml
   }
 });
