@@ -8,8 +8,8 @@
     id:
       label : Id
       type : input
-      value : Id
+      value : id
     label:
       label : Label
       type : input
-      value : Label
+      value : label

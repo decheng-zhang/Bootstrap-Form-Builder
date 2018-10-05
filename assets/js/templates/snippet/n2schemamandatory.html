@@ -1,32 +1,25 @@
 <!-- n2_mandatory_part-->
-
 <br/>
-<div class="control-group" display="inline-block">
- 
-  <label class="control-label" for="group">Group</label>
-  <div class="controls">
-    <input id="group"
-           class="input-large field"
-	 name = "<%- 'group-'+id %>"
-	value="<%- group %>"
-    	type="info-input"
-    />
-
-  </div>
-
-
-  <label class="control-label" for="id">Id</label>
-  <div class="controls">
+<div class="control-group">
+  <label class="control-label" for "group"> Id.GroupId</label>
+  <div class="controls controls-row">
     <input id="id"
-	   class="input-large field"
+	   class="input-medium field"
 	   name = "<%- 'id-'+id %>"
-    	value="<%- id %>"
-    	type="info-input"
-    />
+    	   value="<%- id %>"
+    	   type="info-input"
+	   placeholder="SchemaId">
 
-  </div>
+    <input id="group"
+           class="input-small field"
+	   name = "<%- 'group-'+id %>"
+	   value="<%- group %>"
+    	   type="info-input"
+	   placeholder="GroupId">
+
+</div>
   <label class="control-label" for="label">Label</label>
-  <div class="controls">
+  <div class="controls controls-row">
     <input id="label"
 	   class="input-large field"
 	   name="<%- 'label-'+id %>"
@@ -35,10 +28,10 @@
     />
 
   </div>
-</div>
-<!-- attribute box -->
-<legend>Attributes</legend>
+
+  <!-- attribute box -->
+  
+<legend class= "span5">Attributes</legend>
 <div class="control-group">
- <br/>
 
 </div>

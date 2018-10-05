@@ -2,7 +2,6 @@ define(function(require) {
     var formname               = require('text!templates/snippet/formname.html')
     , n2mandatory               = require('text!templates/snippet/n2schemamandatory.json')
     , n2mandatoryhtml        = require('text!templates/snippet/n2schemamandatory.html')
-    , n2attributehtml       = require('text!templates/snippet/n2attributes.json')
     , n2attributelist      = require('text!templates/snippet/n2attributelist.json')
     , n2attributelisthtml   = require('text!templates/snippet/n2attributelist.html')
     , n2attributetitle = require('text!templates/snippet/n2attributetitle.json')
