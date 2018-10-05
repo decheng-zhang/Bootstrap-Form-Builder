@@ -28,6 +28,11 @@
       label : label
       type : input
       value : Label for String
+    placeholder:
+      label : Place Holder
+      type : input
+      value :
+      priority : optional
 -
   title : n2 attribute selection
   fields:

@@ -36,6 +36,12 @@
         "label": "label",
         "type": "input",
         "value": "Label for String"
+      },
+      "placeholder": {
+        "label": "Place Holder",
+        "type": "input",
+        "value": null,
+        "priority": "optional"
       }
     }
   },
