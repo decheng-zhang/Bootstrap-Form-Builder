@@ -12,7 +12,7 @@
     label:
       label : label
       type : input
-      value : Label for Title
+      value : Label
 -
   title : n2 attribute string
   fields:
@@ -27,12 +27,11 @@
     label:
       label : label
       type : input
-      value : Label for String
+      value : Label
     placeholder:
       label : Place Holder
       type : input
       value :
-      priority : optional
 -
   title : n2 attribute selection
   fields:
@@ -47,7 +46,7 @@
     label:
       label : label
       type  : input
-      value : Label for Selection
+      value : Label
     options:
       label : Options
       type  : textarea-split
@@ -65,7 +64,7 @@
     label:
       label : Label
       type : input
-      value : Label for checkbox
+      value : Label
 -
   title : n2 attribute checkbox group
   fields:
@@ -80,7 +79,7 @@
     label:
       label : label
       type  : input
-      value : Label for Checkbox Group
+      value : Label
     checkboxes:
       label : Checkboxes
       type  : textarea-split
@@ -99,7 +98,7 @@
     label:
       label : Label
       type  : input
-      value : Label for Search Function
+      value : Label
     searchFunction:
       label : Search Function
       type  : select
@@ -163,7 +162,7 @@
     label:
       label : Label
       type : input
-      value: Label for Array
+      value: Label
     elementType:
       label : Element Type
       type : select
