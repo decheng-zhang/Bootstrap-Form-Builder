@@ -1,8 +1,9 @@
 <!-- n2 attribute reference-->
 <div class="control-group">
   <label class="control-label" for="<%- n2id %>"><%- type.charAt(0).toUpperCase() + type.substr(1) %></label>
-  <div class="controls">
-    <div class="input-append">
+  <div class="controls input-prepend">
+    <span class="add-on"><%- label %></span>
+    <div class="input-append pull-left">
       <div class="btn-group">
         <button class="btn dropdown-toggle" data-toggle="dropdown">
           <%- searchFunction %>
