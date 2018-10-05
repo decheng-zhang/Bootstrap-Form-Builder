@@ -3,8 +3,9 @@
   <% var thisId = label.replace(/\W/g, '').toLowerCase() %>
   <label class="control-label" for="<%- thisId %>"><%- type.charAt(0).toUpperCase() + type.substr(1)  %></label>
   
-  <div class="controls">
+  <div class="controls input-prepend">
     <% if(typeof thisId !== "undefined"){ %>
+    <span class="add-on"><%- label %></span>
     <input
        id = "<%- thisId  %>"
        name = "<%- thisId %>"
