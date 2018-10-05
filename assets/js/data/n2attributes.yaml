@@ -142,7 +142,7 @@
     customField:
       label : Custom Field
       type  : input
-      value : <schema-name|layer-id>|<custom-func>
+      value : 
       hide : true
 -
   title : n2 attribute array
