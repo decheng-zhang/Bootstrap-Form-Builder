@@ -150,12 +150,14 @@
           {
             "value": "getDocumentFromSchema",
             "label": "getDocumentFromSchema",
-            "selected": false
+            "selected": false,
+            "needExtra": true
           },
           {
             "value": "getDocumentFromLayer",
             "label": "getDocumentFromLayer",
-            "selected": false
+            "selected": false,
+            "needExtra": true
           },
           {
             "value": "getLayers",
@@ -190,7 +192,8 @@
           {
             "value": "customSearchFunction",
             "label": "customSearchFunction",
-            "selected": false
+            "selected": false,
+            "needExtra": true
           }
         ]
       },

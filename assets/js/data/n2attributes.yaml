@@ -51,7 +51,8 @@
       label : Options
       type  : textarea-split
       value : ["City","Village"]
-- title : n2 attribute checkbox
+-
+  title : n2 attribute checkbox
   fields:
     type:
       label : type
@@ -111,10 +112,12 @@
             value: getDocumentFromSchema
             label: getDocumentFromSchema
             selected: false
+            needExtra: true
           -
             value: getDocumentFromLayer
             label: getDocumentFromLayer
             selected: false
+            needExtra: true
           -
             value: getLayers
             label: getLayers
@@ -143,6 +146,7 @@
             value: customSearchFunction
             label: customSearchFunction
             selected: false
+            needExtra: true
     customField:
       label : Custom Field
       type  : input
