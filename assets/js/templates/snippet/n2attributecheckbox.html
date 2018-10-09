@@ -1,0 +1,12 @@
+<!-- n2 attribute checkbox -->
+<div class="control-group">
+  <% var thisId = label.replace(/\W/g, '').toLowerCase(); %>
+  <label class="control-label" for="<%- n2id %>"><%- type.charAt(0).toUpperCase() + type.substr(1)  %></label>
+  <div class="controls input-prepend">
+    <% if(typeof thisId !== "undefined"){ %>
+    <span class="add-on"><%- label %></span>
+    <input type ="checkbox" name="<%- thisId %>" id="<%- n2id %>" >
+    <% } %>
+  </div>
+</div>
+

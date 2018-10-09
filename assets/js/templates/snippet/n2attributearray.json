@@ -1,0 +1,6 @@
+    "type" : "<%- type %>"
+    ,"id"  : "<%- n2id %>"
+    ,"label" : "<%- label %>"
+    <% _.each(["includedInBrief", "textarea", "excludedFromDisplay", "excludedFromForm", "urlsToLinks", "wikiTransform" ], function(optional){ %><% if (eval( "typeof " + optional) !== "undefined" && eval(optional) ) { %>,"<%- optional %>" : true
+    <% }  }); %>,"elementType" : "<%- elementType %>"
+
