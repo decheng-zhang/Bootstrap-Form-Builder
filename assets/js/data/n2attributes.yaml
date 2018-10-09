@@ -6,11 +6,11 @@
       type  : string
       value  : title
     n2id:
-      label : id
+      label : Id
       type : string
       value : id
     label:
-      label : label
+      label : Label
       type : input
       value : Label
 -
@@ -21,11 +21,11 @@
       type  : string
       value  : string
     n2id:
-      label : id
+      label : Id
       type : string
       value : id
     label:
-      label : label
+      label : Label
       type : input
       value : Label
     placeholder:
@@ -40,11 +40,11 @@
       type  : string
       value : selection
     n2id:
-      label : id
+      label : Id
       type  : string
       value : id
     label:
-      label : label
+      label : Label
       type  : input
       value : Label
     options:
@@ -59,7 +59,7 @@
       type : string
       value : checkbox
     n2id:
-      label : id
+      label : Id
       type  : string
       value : id
     label:
@@ -74,11 +74,11 @@
       type  : string
       value : checkbox-group
     n2id:
-      label : id
+      label : Id
       type  : string
       value : id
     label:
-      label : label
+      label : Label
       type  : input
       value : Label
     checkboxes:
@@ -93,7 +93,7 @@
       type  : string
       value : reference
     n2id:
-      label : id
+      label : Id
       type  : string
       value : id
     label:
@@ -160,7 +160,7 @@
       type : string
       value : array
     n2id:
-      label : id
+      label : Id
       type : string
       value : id
     label:
