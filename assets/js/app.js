@@ -33,30 +33,12 @@ define([
       //Make the first tab active!
       $("#components .tab-pane").first().addClass("active");
       $("#formtabs li").first().addClass("active");
-	// Bootstrap "My Form" with 'Form Name' snippet.
+	// Bootstrap "My json" with 'info json' snippet.
       new MyFormView({
         title: "Original"
         , collection: new MyFormSnippetsCollection(JSON.parse(n2mandatoryJSON))
       });
-      // new MyFormView({
-      //       title: "Attribute"
-      //       , collection : new MyFormSnippetsCollection([
-      //           {
-      //               "title": "n2 Attribute List"
-      //               ,"fields" : {
-      //                   "name": {
-      //                       "label"   : "Attributes"
-      //                       , "type"  : "string"
-      //                       , "value" : "attributes"
-      //                   }
-      //               }
-                    
 
-      //           }
-      //       ])
-
-      //       })
-//-----------
     }
   }
 });
