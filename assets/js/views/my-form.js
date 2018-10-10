@@ -32,7 +32,7 @@ define([
         that.$el.append(snippet);
       });
 	var partitedEleMandatory = _.filter(this.collection.renderAll(), function(e){
-	    if(e[0].attributes.getNamedItem("data-title").nodeValue
+	    if($(e).attr("data-title")
 		=== "n2 schema info")
 	    {
 		return true;
@@ -42,13 +42,13 @@ define([
 	    }
 	} )
 	var partitedEleAttribute  = _.reject(this.collection.renderAll(), function(e){
-
-	    if( (e[0].attributes.getNamedItem("data-title").nodeValue
+	    if( ($(e).attr("data-title")
 		 === "n2 schema info") )
 	    {
 		return true;
 	    }
-	    else {
+	    else
+	    {
 		return false;
 	    }
 	} )
@@ -56,10 +56,10 @@ define([
       $("#render").val(that.renderForm({
           multipart: this.collection.containsFileType(),
 	  mandatorytext: _.map( partitedEleMandatory, function(e){
-	      return e[0].attributes.getNamedItem("json-content").nodeValue}).join("\n"),
+	      return $(e).attr("json-content")}).join("\n"),
 	  attributestext: _.map( partitedEleAttribute, 
 	      function(e){
-		  return " {\n" + e[0].attributes.getNamedItem("json-content").nodeValue.replace(/^/gm, '        ')+ "   }"}).join()
+        	  return " {\n" + $(e).attr("json-content").replace(/^/gm, '        ')+ "}"}).join()
       }
 			));
       this.$el.appendTo("#build form");
