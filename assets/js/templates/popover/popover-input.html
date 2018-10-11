@@ -1,20 +1,24 @@
-<% if (typeof hide !== "undefined" && hide ) { %>
-<a class="accordion-toggle" data-toggle="collapse" aria-pressed="false" href="#optional">
-    
+
+<% if (typeof hide !== "undefined") { %>
+
+<a class="toggle-controller" aria-pressed="false" href="#optional">
     </a>
-    <div id = "optional" class="collapse">
+    <div id = "optional" class="collapse" data-toggle="false">
       <input class='input-large field hideable' data-type="<%- type %>" type='text' name='<%- name %>' id='<%- name %>' value ='<%- value %>' placeholder='Custom Field' <% if(typeof disabled !== "undefined" && disabled) { %> disabled <% } %> />
     </div>
     <script>
 
-      $('a.accordion-toggle').on('extraInputShow', function(event){
+      $('a.toggle-controller').on('extraInputShow', function(event){
       $('.collapse').collapse('show')
+      
       })
-      $('a.accordion-toggle').on('extraInputHide', function(event){
+      $('a.toggle-controller').on('extraInputHide', function(event){
       $('.collapse').collapse('hide')
+      
      })
     </script>
     <% } else { %>
     <label class='control-label'> <%= label %> </label>
     <input class='input-large field' data-type="<%- type %>" type='text' name='<%- name %>' id='<%- name %>' value ='<%- value %>' <% if(typeof disabled !== "undefined" && disabled) { %> disabled <% } %> />
 <% } %>
+
