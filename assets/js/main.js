@@ -11,7 +11,11 @@ require.config({
     'bootstrap': {
       deps: ['jquery'],
       exports: '$.fn.popover'
-    }
+    },
+    'jquery.couch': {
+	  deps: ['jquery'],
+	  exports: '$.couch'
+      }
   }
   , paths: {
     app         : ".."

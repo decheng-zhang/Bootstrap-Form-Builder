@@ -1,11 +1,11 @@
 define([
-       "jquery" , "underscore" , "backbone"
+    "jquery" , "underscore" , "backbone","jquery.couch"
        , "collections/snippets" , "collections/my-form-snippets"
        , "views/tab" , "views/my-form"
     , "text!data/n2.json", "text!data/n2attributes.json"
     , "text!templates/app/render.html", "text!templates/app/about.html"
 ], function(
-  $, _, Backbone
+    $, _, Backbone, Couch
   , SnippetsCollection, MyFormSnippetsCollection
     , TabView, MyFormView
     , n2mandatoryJSON,  attributesJSON
@@ -38,6 +38,12 @@ define([
         title: "Original"
         , collection: new MyFormSnippetsCollection(JSON.parse(n2mandatoryJSON))
       });
+	$.couch.urlPrefix = "http://localhost:5984"
+	$.couch.info({
+	    success: function(data) {
+		console.log(data);
+	    }
+	});
 
     }
   }
