@@ -23,7 +23,7 @@ define([
       fields[name]["value"] = value;
       this.set("fields", fields);
     }
-     , mergeField: function(snippet){
+    , mergeField: function(snippet){
 	 var fields = this.get("fields")
 	 var thatFields = snippet.get("fields")
 	 this.set("fields", _.extend(fields, thatFields))
