@@ -38,12 +38,12 @@ define([
         title: "Original"
         , collection: new MyFormSnippetsCollection(JSON.parse(n2mandatoryJSON))
       });
-	$.couch.urlPrefix = "http://localhost:5984"
-	$.couch.info({
-	    success: function(data) {
-		console.log(data);
-	    }
-	});
+	//$.couch.urlPrefix = "http://localhost:5984"
+	//$.couch.info({
+	  //  success: function(data) {
+	//	console.log(data);
+	  //  }
+//	});
 
     }
   }

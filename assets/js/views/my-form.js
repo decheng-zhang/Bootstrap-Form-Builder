@@ -28,7 +28,7 @@ define([
       this.$el.empty();
       var that = this;
       var containsFile = false;
-      _.each(this.collection.renderAll(), function(snippet){
+	_.each(this.collection.renderAll(), function(snippet){
         that.$el.append(snippet);
       });
 	var partitedEleMandatory = _.filter(this.collection.renderAll(), function(e){
