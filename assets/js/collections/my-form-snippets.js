@@ -63,6 +63,13 @@ define([
         return snippet.attributes.title === "File Button"
       }) === "undefined");
     }
+      , readRapeSnippets: function(rapeJson){
+	  
+	  this.reset();
+	  this.collection.add()
+	  
+
+      }
     , renderAll: function(){
       return this.map(function(snippet){
         return new MyFormSnippetView({model: snippet}).render(true);
