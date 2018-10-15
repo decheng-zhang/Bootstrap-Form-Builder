@@ -70,7 +70,9 @@ define([
 	    this.reset();
       var rapeSnippets = JSON.parse(testRape);
       var infoSnippetJson = JSON.parse(n2mandatoryJSON);
+      var attrSnippetJson = JSON.parse(attributesJSON);
       var that = this;
+      //adding info-snippet
       _.each( infoSnippetJson, function(infoSnippetInstance){
         var infoSnippet = new SnippetModel(infoSnippetInstance)
         _.each(_.keys(rapeSnippets), function(fieldname){
@@ -80,8 +82,25 @@ define([
         })
         that.push(infoSnippet);
       });
+      //adding attributes-Snippets
+      var attrs = rapeSnippets["attributes"];
+      _.each( attrs, function(attr){
+        var candidateSnippet = _.find(attrSnippetJson, function(n2attr) {
+          return n2attr["fields"]["type"]["value"] === attr["type"]
+        })
+        if(typeof candidateSnippet  === "undefined"){
+          console.log("CAUSION: there is one or more types not defined");
+        }
+        var candidateSnippetInstance = new SnippetModel(candidateSnippet).clone();
+        _.each(_.keys(attr), function(fieldname){
+          if(typeof candidateSnippetInstance.get("fields")[fieldname] !== "undefined"){
+            candidateSnippetInstance.setField( fieldname, attr[fieldname]);
+          }
+        })
 
 
+      })
+     this.renderAll();
 
 
 
