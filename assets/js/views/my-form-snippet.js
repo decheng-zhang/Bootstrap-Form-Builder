@@ -14,7 +14,7 @@ define([
       , "mouseup"   : "mouseUpHandler"
     }
 
-      , mouseDownHandler : function(mouseDownEvent){
+    , mouseDownHandler : function(mouseDownEvent){
 	  if(this.model.get("title") !== "n2 schema info"){
 	      mouseDownEvent.stopPropagation();
 	      mouseDownEvent.preventDefault();
@@ -24,12 +24,10 @@ define([
 	      this.$el.popover("show");
 	      $(".popover #save").on("click", this.saveHandler(that));
 	      $(".popover #cancel").on("click", this.cancelHandler(that));
-	      
-
-              $("body").on("mousemove", function(mouseMoveEvent){
+        $("body").on("mousemove", function(mouseMoveEvent){
 		  if(
 		      Math.abs(mouseDownEvent.pageX - mouseMoveEvent.pageX) > 10 ||
-			  Math.abs(mouseDownEvent.pageY - mouseMoveEvent.pageY) > 10
+			    Math.abs(mouseDownEvent.pageY - mouseMoveEvent.pageY) > 10
 		  ){
 		      that.$el.popover('destroy');
 		      PubSub.trigger("mySnippetDrag", mouseDownEvent, that.model);

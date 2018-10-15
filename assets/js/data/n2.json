@@ -2,10 +2,20 @@
   {
     "title": "n2 schema info",
     "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "info"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
       "group": {
         "label": "Group",
         "type": "input",
-        "value": "groupId"
+        "value": "AtlasId"
       },
       "id": {
         "label": "Id",

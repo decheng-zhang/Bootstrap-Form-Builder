@@ -20,14 +20,22 @@ define([
       PubSub.on("tempDrop", this.handleTempDrop, this);
       this.$build = $("#build");
       this.renderForm = _.template(_renderForm);
+      var that = this;
+      $("button.schemsubmit").on("click", function(){
+        that.collection.readRapeSnippets();
+      });
       this.render();
+
     }
+
 
     , render: function(){
       //Render Snippet Views
       this.$el.empty();
       var that = this;
       var containsFile = false;
+      //for read json test
+
 	_.each(this.collection.renderAll(), function(snippet){
         that.$el.append(snippet);
       });
@@ -57,7 +65,7 @@ define([
           multipart: this.collection.containsFileType(),
 	  mandatorytext: _.map( partitedEleMandatory, function(e){
 	      return $(e).attr("json-content")}).join("\n"),
-	  attributestext: _.map( partitedEleAttribute, 
+	  attributestext: _.map( partitedEleAttribute,
 	      function(e){
         	  return " {\n" + $(e).attr("json-content").replace(/^/gm, '        ')+ "}"}).join()
       }
