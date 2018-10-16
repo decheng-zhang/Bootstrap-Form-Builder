@@ -71,13 +71,16 @@ define([
       var rapeSnippets = JSON.parse(testRape);
       var infoSnippetJson = JSON.parse(n2mandatoryJSON);
       var attrSnippetJson = JSON.parse(attributesJSON);
+      var attrBoolSnippetInstance = JSON.parse(n2AttrBoolean) [0]
       var that = this;
       //adding info-snippet
       _.each( infoSnippetJson, function(infoSnippetInstance){
         var infoSnippet = new SnippetModel(infoSnippetInstance)
+        infoSnippet.set("fresh", false);
         _.each(_.keys(rapeSnippets), function(fieldname){
           if(fieldname !== "attributes"){
-            infoSnippet.setField(fieldname, rapeSnippets[fieldname])
+            fieldnameDecorated = fieldname === "id"? "n2id" : fieldname;
+            infoSnippet.setFieldFromJson(fieldnameDecorated, rapeSnippets[fieldname])
           }
         })
         that.push(infoSnippet);
@@ -85,22 +88,30 @@ define([
       //adding attributes-Snippets
       var attrs = rapeSnippets["attributes"];
       _.each( attrs, function(attr){
-        var candidateSnippet = _.find(attrSnippetJson, function(n2attr) {
+        var candidateSnippetModel = _.find(attrSnippetJson, function(n2attr) {
           return n2attr["fields"]["type"]["value"] === attr["type"]
         })
-        if(typeof candidateSnippet  === "undefined"){
+        if(typeof candidateSnippetModel  !== "undefined"){
+
+          var newCandidateSnippetModel =JSON.parse(JSON.stringify(candidateSnippetModel))
+          var candidateSnippetInstance = new SnippetModel(newCandidateSnippetModel);
+          candidateSnippetInstance.set("fresh", false);
+          var newAttrBoolSnippetInstance = JSON.parse(JSON.stringify(attrBoolSnippetInstance))
+          candidateSnippetInstance.mergeField(new Backbone.Model(newAttrBoolSnippetInstance));
+          _.each(_.keys(attr), function(fieldname){
+            if(typeof candidateSnippetInstance.get("fields")[fieldname] !== "undefined" ||
+             fieldname === "id"
+          ){
+              fieldnameDecorated = fieldname === "id"? "n2id" : fieldname;
+              candidateSnippetInstance.setFieldFromJson( fieldnameDecorated, attr[fieldname]);
+            }
+          })
+        }else{
           console.log("CAUSION: there is one or more types not defined");
         }
-        var candidateSnippetInstance = new SnippetModel(candidateSnippet).clone();
-        _.each(_.keys(attr), function(fieldname){
-          if(typeof candidateSnippetInstance.get("fields")[fieldname] !== "undefined"){
-            candidateSnippetInstance.setField( fieldname, attr[fieldname]);
-          }
-        })
-
-
+        that.push(candidateSnippetInstance);
       })
-     this.renderAll();
+      //this.renderAll();
 
 
 

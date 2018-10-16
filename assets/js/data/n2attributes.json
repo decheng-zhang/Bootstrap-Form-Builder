@@ -99,7 +99,7 @@
       "type": {
         "label": "type",
         "type": "string",
-        "value": "checkbox-group"
+        "value": "checkbox_group"
       },
       "n2id": {
         "label": "id",

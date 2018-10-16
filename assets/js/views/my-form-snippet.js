@@ -51,19 +51,19 @@ define([
         $("body").off("mousemove");
     }
     , saveHandlerForInfo : function(boundContext) {
-	return function(e) {
-	    e.preventDefault();
-	    var fields = $(".field");
-	    _.each(fields, function(ele) {
-		var $ele = $(ele)
-		, type = $ele.attr("type")
-		, name = $ele.attr("id");
-		if( type === "info-input"){
-		    boundContext.model.setField(name, $ele.val());
-		}
-	    });
-	    boundContext.model.trigger("change");
-	}
+      return function(e) {
+        e.preventDefault();
+        var fields = $(".field");
+        _.each(fields, function(ele) {
+          var $ele = $(ele)
+          , type = $ele.attr("type")
+          , name = $ele.attr("n2id");
+          if( type === "info-input"){
+            boundContext.model.setField(name, $ele.val());
+          }
+        });
+        boundContext.model.trigger("change");
+      }
 
     }
 

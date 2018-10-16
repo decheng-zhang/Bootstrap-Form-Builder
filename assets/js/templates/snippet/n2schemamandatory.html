@@ -4,9 +4,10 @@
   <label class="control-label" for "group"> Id.GroupId</label>
   <div class="controls row">
     <input id="id"
+     n2id = "n2id"
 	   class="span4 field"
 	   name = "<%- 'id-'+id %>"
-    	   value="<%- id %>"
+    	   value="<%- n2id %>"
     	   type="info-input"
 	   placeholder="SchemaId">
 
@@ -15,6 +16,7 @@
 	   name = "<%- 'group-'+id %>"
 	   value="<%- group %>"
     	   type="info-input"
+          n2id = "group"
 	   placeholder="GroupId">
 
 </div>
@@ -24,13 +26,14 @@
 	   class="span8 field"
 	   name="<%- 'label-'+id %>"
     	value="<%- label %>"
+       n2id = "label"
     	type="info-input"
     />
 
   </div>
 </div>
   <!-- attribute box -->
-  
+
 <legend class= "span5">Attributes</legend>
 <div class="control-group">
 

@@ -21,29 +21,9 @@
 			,"textarea": true
 		}
 		,{
-			"type":"date"
-			,"id":"period"
-			,"label":"Period"
-		}
-		,{
 			"type":"reference"
 			,"id":"author"
 			,"label":"Author"
-		}
-		,{
-			"type":"selection"
-			,"id":"type"
-			,"label":"Type"
-			,"options":[
-				{
-					"label": "City"
-					,"value": "city"
-				}
-				,{
-					"label": "Village"
-					,"value": "village"
-				}
-			]
 		}
 		,{
 			"type":"checkbox"
