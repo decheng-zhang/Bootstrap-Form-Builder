@@ -27,6 +27,10 @@ define([
     , setFieldFromJson: function(name, value){
 
       var fields = this.get("fields")
+      if(typeof fields[name] === "undefined") {
+        console.log("CAUSION: one of the field is missing in ", name)
+        return;
+      }
       var type = fields[name]["type"]
       switch(type) {
         case "string":
@@ -38,23 +42,36 @@ define([
           this.set("fields", fields);
           break;
         case "input":
-          fields[name]["value"] = value
-          this.set("fields", fields);
+          if(fields[name]["hide"] !== "undefined" && fields[name]["hide"]) {
+
+          } else {
+             fields[name]["value"] = value
+             this.set("fields", fields);
+          }
           break;
         case "textarea":
           fields[name]["value"] = value
           this.set("fields", fields);
           break;
         case "textarea-split":
-          var checkboxvalarr = _.map(value, function(t){return $.trim(t["label"]).toLowerCase()})
+          var checkboxvalarr = _.map(value, function(t){return $.trim(t["label"])})
           fields[name]["value"] = checkboxvalarr
           this.set("fields", fields);
           break;
         case "select":
-          var valarr = _.map($e.find("option"), function(e){
-            return {value: e.value, selected: e.selected, label:$(e).text()};
+          var valmatch = _.find(fields[name]["value"], function(v){
+            return value.startsWith(v["value"])
           });
-          boundContext.model.setField(name, valarr);
+          var valarr = _.map(fields[name]["value"], function(v){
+            return {value: v["value"], label: v["label"], selected: value.startsWith(v["value"])
+                    ,needExtra :  v["needExtra"]  }
+          });
+
+          if(typeof valmatch["needExtra"] !=="undefined" && valmatch["needExtra"]) {
+            fields["customField"]["value"] = value.substring(value.indexOf("\<")+1, value.lastIndexOf("\>"))
+          }
+          fields[name]["value"] = valarr;
+          this.set("fields", fields);
           break;
       }
 

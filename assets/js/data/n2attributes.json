@@ -8,12 +8,12 @@
         "value": "title"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
       "label": {
-        "label": "label",
+        "label": "Label",
         "type": "input",
         "value": "Label"
       }
@@ -28,20 +28,19 @@
         "value": "string"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
       "label": {
-        "label": "label",
+        "label": "Label",
         "type": "input",
         "value": "Label"
       },
       "placeholder": {
         "label": "Place Holder",
         "type": "input",
-        "value": null,
-        "priority": "optional"
+        "value": null
       }
     }
   },
@@ -54,12 +53,12 @@
         "value": "selection"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
       "label": {
-        "label": "label",
+        "label": "Label",
         "type": "input",
         "value": "Label"
       },
@@ -82,7 +81,7 @@
         "value": "checkbox"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -102,12 +101,12 @@
         "value": "checkbox_group"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
       "label": {
-        "label": "label",
+        "label": "Label",
         "type": "input",
         "value": "Label"
       },
@@ -130,7 +129,7 @@
         "value": "reference"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -151,12 +150,14 @@
           {
             "value": "getDocumentFromSchema",
             "label": "getDocumentFromSchema",
-            "selected": false
+            "selected": false,
+            "needExtra": true
           },
           {
             "value": "getDocumentFromLayer",
             "label": "getDocumentFromLayer",
-            "selected": false
+            "selected": false,
+            "needExtra": true
           },
           {
             "value": "getLayers",
@@ -191,7 +192,8 @@
           {
             "value": "customSearchFunction",
             "label": "customSearchFunction",
-            "selected": false
+            "selected": false,
+            "needExtra": true
           }
         ]
       },
@@ -212,7 +214,7 @@
         "value": "array"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },

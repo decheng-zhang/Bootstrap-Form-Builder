@@ -26,6 +26,27 @@
 			,"label":"Author"
 		}
 		,{
+			"type":"selection"
+			,"id":"type"
+			,"label":"Type"
+			,"options":[
+				{
+					"label": "City"
+					,"value": "city"
+				}
+				,{
+					"label": "Village"
+					,"value": "village"
+				}
+			]
+		}
+		,{
+			"type": "reference"
+			,"id": "reference"
+			,"label": "Reference"
+			, "searchFunction":"getDocumentFromSchema('<schema-name>')"
+		}
+		,{
 			"type":"checkbox"
 			,"id":"verified"
 			,"label":"Has been verified"

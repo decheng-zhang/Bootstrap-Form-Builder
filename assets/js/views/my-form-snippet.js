@@ -21,6 +21,7 @@ define([
 	      var that = this;
 	      //popover
 	      $(".popover").remove();
+	      this.$el.popover({placement: 'bottom'});
 	      this.$el.popover("show");
 	      $(".popover #save").on("click", this.saveHandler(that));
 	      $(".popover #cancel").on("click", this.cancelHandler(that));
@@ -97,21 +98,23 @@ define([
               break;
             case "select":
               var valarr = _.map($e.find("option"), function(e){
-                return {value: e.value, selected: e.selected, label:$(e).text()};
+		  return {value: e.value, selected: e.selected, label:$(e).text()
+			  , needExtra: (typeof $(e).attr("needextra") !== "undefined") ? $(e).attr("needextra") : false
+			 };
               });
               boundContext.model.setField(name, valarr);
               break;
           }
         });
-        boundContext.model.trigger("change");
-        $(".popover").remove();
+          boundContext.model.trigger("change");
+          $(".popover").remove();
       }
     }
 
     , cancelHandler : function(boundContext) {
       return function(mouseEvent) {
         mouseEvent.preventDefault();
-        $(".popover").remove();
+          $(".popover").remove();
         boundContext.model.trigger("change");
       }
     }

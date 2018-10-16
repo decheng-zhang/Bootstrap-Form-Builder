@@ -2,7 +2,7 @@
 <div class="control-group">
   <% var thisId = label.replace(/\W/g, '').toLowerCase() %>
   <label class="control-label" for="<%- thisId %>"><%- type.charAt(0).toUpperCase() + type.substr(1) + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0"+  label %></label>
-  
+
   <div class="controls">
     <% if(typeof thisId !== "undefined"){ %>
     <input
@@ -12,8 +12,8 @@
        value=""
        />
       <% } %>
-    
-  
-    
+
+
+
   </div>
 </div>
