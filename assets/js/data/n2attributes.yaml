@@ -12,7 +12,7 @@
     label:
       label : label
       type : input
-      value : Label for Title
+      value : Label
 -
   title : n2 attribute string
   fields:
@@ -27,7 +27,7 @@
     label:
       label : label
       type : input
-      value : Label for String
+      value : Label
     placeholder:
       label : Place Holder
       type : input
@@ -47,25 +47,26 @@
     label:
       label : label
       type  : input
-      value : Label for Selection
+      value : Label
     options:
       label : Options
       type  : textarea-split
       value : ["City","Village"]
-- title : n2 attribute checkbox
-  fields:
-    type:
-      label : type
-      type : string
-      value : checkbox
-    n2id:
-      label : id
-      type  : string
-      value : id
-    label:
-      label : Label
-      type : input
-      value : Label for checkbox
+- 
+   title : n2 attribute checkbox
+   fields:
+     type:
+       label : type
+       type : string
+       value : checkbox
+     n2id:
+       label : id
+       type  : string
+       value : id
+     label:
+       label : label
+       type : input
+       value : Label
 -
   title : n2 attribute checkbox group
   fields:
@@ -80,7 +81,7 @@
     label:
       label : label
       type  : input
-      value : Label for Checkbox Group
+      value : Label
     checkboxes:
       label : Checkboxes
       type  : textarea-split
@@ -97,9 +98,9 @@
       type  : string
       value : id
     label:
-      label : Label
+      label : label
       type  : input
-      value : Label for Search Function
+      value : Label
     searchFunction:
       label : Search Function
       type  : select
@@ -161,9 +162,9 @@
       type : string
       value : id
     label:
-      label : Label
+      label : label
       type : input
-      value: Label for Array
+      value: Label
     elementType:
       label : Element Type
       type : select
@@ -184,3 +185,123 @@
            value: reference
            label : reference
            selected: false
+-
+  title : n2 attribute localized
+  fields:
+    type:
+      label : type
+      type : string
+      value: localized
+    n2id:
+      label : id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value: Label
+-
+  title: n2 attribute date
+  fields:
+    type:
+      label : type
+      type : string
+      value : date
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute file
+  fields:
+    type:
+      label : type
+      type : string
+      value : file
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute geometry
+  fields:
+    type:
+      label : type
+      type : string
+      value : geometry
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute hover sound
+  fields:
+    type:
+      label : type
+      type : string
+      value : hover_sound
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute createdBy
+  fields:
+    type:
+      label : type
+      type : string
+      value : createdBy
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute createdTime
+  fields:
+    type:
+      label : type
+      type : string
+      value : createdTime
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute custom
+  fields:
+    type:
+      label : type
+      type : string
+      value : custom
+    n2id:
+      label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
