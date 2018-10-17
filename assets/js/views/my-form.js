@@ -18,6 +18,7 @@ define([
       PubSub.on("mySnippetDrag", this.handleSnippetDrag, this);
       PubSub.on("tempMove", this.handleTempMove, this);
       PubSub.on("tempDrop", this.handleTempDrop, this);
+      PubSub.on("loadingExistingSchema", this.handleLoadingSchema, this);
       this.$build = $("#build");
       this.renderForm = _.template(_renderForm);
       var that = this;
@@ -27,7 +28,10 @@ define([
       this.render();
 
     }
+    , handleLoadingSchema : function(model){
+        this.collection.readRapeSnippets();
 
+    }
 
     , render: function(){
       //Render Snippet Views

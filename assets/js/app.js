@@ -4,13 +4,14 @@ define([
        , "views/tab" , "views/my-form"
     , "text!data/n2.json", "text!data/n2attributes.json"
     , "text!templates/app/render.html", "text!templates/app/about.html"
+    , "text!templates/app/loading.html"
     , "text!data/testrape.json"
 ], function(
     $, _, Backbone, Couch
   , SnippetsCollection, MyFormSnippetsCollection
     , TabView, MyFormView
     , n2mandatoryJSON,  attributesJSON
-    , renderTab, aboutTab
+    , renderTab, aboutTab, loadingTab
     , testRape
 ){
   return {
@@ -29,7 +30,11 @@ define([
         title: "About"
         , content: aboutTab
       });
-
+  new TabView({
+            title: "LoadingSchemas"
+            , content: loadingTab
+            , dropdown: true
+          });
       //Make the first tab active!
       $("#components .tab-pane").first().addClass("active");
       $("#formtabs li").first().addClass("active");
