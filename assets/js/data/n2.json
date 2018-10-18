@@ -9,8 +9,8 @@
       },
       "n2id": {
         "label": "id",
-        "type": "input",
-        "value": "Id"
+        "type": "string",
+        "value": "id"
       },
       "group": {
         "label": "Group",

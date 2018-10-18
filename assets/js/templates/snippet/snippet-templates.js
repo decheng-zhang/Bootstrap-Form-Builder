@@ -1,5 +1,9 @@
 define(function(require) {
+    
     var formname               = require('text!templates/snippet/formname.html')
+    , n2attributeboolean = require('text!templates/snippet/n2attributeboolean.json')
+    , n2attributedefault = require('text!templates/snippet/n2attributedefault.json')
+    , n2attributedefaulthtml = require('text!templates/snippet/n2attributedefault.html')
     , n2mandatory               = require('text!templates/snippet/n2schemamandatory.json')
     , n2mandatoryhtml        = require('text!templates/snippet/n2schemamandatory.html')
     , n2attributelist      = require('text!templates/snippet/n2attributelist.json')
@@ -20,23 +24,25 @@ define(function(require) {
     , n2attributearrayhtml = require('text!templates/snippet/n2attributearray.html')
   return {
       formname                   : formname
+      , n2attributedefault : n2attributedefault
+      , n2attributedefaulthtml: n2attributedefaulthtml
       , n2schemainfo        : n2mandatory
       , n2schemainfohtml    : n2mandatoryhtml
       , n2attributelist        : n2attributelist
       , n2attributelisthtml    : n2attributelisthtml
       , n2attributetitlehtml  : n2attributetitlehtml
-      , n2attributetitle  : n2attributetitle
-      , n2attributestring : n2attributestring
+      , n2attributetitle  : n2attributetitle+ n2attributeboolean
+      , n2attributestring : n2attributestring + n2attributeboolean
       , n2attributestringhtml : n2attributestringhtml
-      , n2attributeselection : n2attributeselection
+      , n2attributeselection : n2attributeselection+ n2attributeboolean
       , n2attributeselectionhtml : n2attributeselectionhtml
-      , n2attributereference : n2attributereference
+      , n2attributereference : n2attributereference+ n2attributeboolean
       , n2attributereferencehtml : n2attributereferencehtml
-      , n2attributecheckbox   : n2attributecheckbox
+      , n2attributecheckbox   : n2attributecheckbox+ n2attributeboolean
       , n2attributecheckboxhtml : n2attributecheckboxhtml
-      , n2attributecheckboxgroup : n2attributecheckboxgroup
+      , n2attributecheckboxgroup : n2attributecheckboxgroup+ n2attributeboolean
       , n2attributecheckboxgrouphtml : n2attributecheckboxgrouphtml
-      , n2attributearray : n2attributearray
+      , n2attributearray : n2attributearray+ n2attributeboolean
       , n2attributearrayhtml : n2attributearrayhtml
   }
 });

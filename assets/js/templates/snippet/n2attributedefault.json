@@ -1,0 +1,2 @@
+    <% _.each(_.keys(obj), function(k) {%><% var correctkey = k === "n2id"? "id" : k%>"<%- correctkey %>" : "<%- obj[k] %>"
+    <% }) %>

@@ -25,7 +25,8 @@ define([
     , className: "component" 
       , initialize: function(){
 	 // console.log("which two problem: " , this.model.idFriendlyTitle() + "html")
-	  this.template = _.template(_snippetTemplates[this.model.idFriendlyTitle()+ "html"])
+      var templatehtmlfile = _snippetTemplates[this.model.idFriendlyTitle()+ "html"] || _snippetTemplates["n2attributedefaulthtml"]
+	  this.template = _.template(templatehtmlfile)
 	  this.popoverTemplates = {
               "input" : _.template(_PopoverInput)
               , "select" : _.template(_PopoverSelect)
@@ -45,7 +46,8 @@ define([
 	//console.log("which one problem: " , this.model.idFriendlyTitle())
 	
 	if (withAttributes) {
-	    var jsonContent =  _.template(_snippetTemplates[this.model.idFriendlyTitle()])(that.model.getValues());
+        var templatefile = _snippetTemplates[this.model.idFriendlyTitle()] || _snippetTemplates["n2attributedefault"]
+	    var jsonContent =  _.template(templatefile)(that.model.getValues());
             return this.$el.html(
             that.template(that.model.getValues())
         ).attr({

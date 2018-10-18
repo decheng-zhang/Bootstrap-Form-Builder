@@ -11,6 +11,10 @@ require.config({
     'bootstrap': {
       deps: ['jquery'],
       exports: '$.fn.popover'
+    }
+    ,'bootstrap-waitingfor':{
+        deps: ['jquery','bootstrap'],
+        exports: 'Waitingfor'
     },
     'jquery.couch': {
 	  deps: ['jquery'],

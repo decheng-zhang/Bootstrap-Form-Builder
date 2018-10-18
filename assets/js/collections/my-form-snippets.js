@@ -1,5 +1,5 @@
 define([
-       "jquery" , "underscore" , "backbone"
+       "jquery" , "underscore" , "backbone","bootstrap-waitingfor"
        , "models/snippet"
        , "collections/snippets"
     , "views/my-form-snippet"
@@ -7,7 +7,7 @@ define([
     , "text!data/n2.json" , "text!data/n2attributes.json"
    , "text!data/testrape.json"
 ], function(
-  $, _, Backbone
+  $, _, Backbone, Waitingfor
   , SnippetModel
   , SnippetsCollection
     , MyFormSnippetView
@@ -66,7 +66,9 @@ define([
       }) === "undefined");
     }
     , readRapeSnippets: function(){
-
+       // var waitingDialog = Waitingfor.constructDialog();
+        waitingDialog.show();
+        setTimeout(function(){waitingDialog.hide();},1500)
 	    this.reset();
       var rapeSnippets = JSON.parse(testRape);
       var infoSnippetJson = JSON.parse(n2mandatoryJSON);

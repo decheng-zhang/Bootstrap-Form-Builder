@@ -26,11 +26,11 @@ define([
             title: "Rendered"
             , content: renderTab
 	});
-  new TabView({
+    new TabView({
         title: "About"
         , content: aboutTab
       });
-  new TabView({
+    new TabView({
             title: "LoadingSchemas"
             , content: loadingTab
             , dropdown: true

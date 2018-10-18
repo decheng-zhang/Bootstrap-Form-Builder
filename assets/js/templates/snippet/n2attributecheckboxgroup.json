@@ -1,8 +1,7 @@
     "type" : "<%- type %>"
     ,"id"  : "<%- n2id %>"
     ,"label" : "<%- label %>"
-    <% _.each(["includedInBrief", "textarea", "excludedFromDisplay", "excludedFromForm", "urlsToLinks", "wikiTransform" ], function(optional){ %><% if (eval( "typeof " + optional) !== "undefined" && eval(optional) ) { %>,"<%- optional %>" : true
-    <% }  }); %>,"checkboxes" : [<% _.each(checkboxes, function(checkbox, idx, list) { %>
+    ,"checkboxes" : [<% _.each(checkboxes, function(checkbox, idx, list) { %>
 	      {
 		  "id": "<%- checkbox.replace(/\W/g, '_') %>"
 		  ,"label": "<%- checkbox.toLowerCase() %>"
