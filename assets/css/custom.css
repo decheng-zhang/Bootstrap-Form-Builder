@@ -13,8 +13,20 @@ body {
 #components {
   min-height: 500px;
 }
+
+#build #target div.component:first-of-type{
+  max-width: 480px;
+  height : auto;
+  padding: 20px;
+  margin: auto;
+  background: #FFF;
+  margin-top: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s;
+  border-radius: 3px;
+}
 .component{
-  width: 480px;
+  max-width: 400px;
   height: 40px;
   padding: 20px;
   margin: auto;
@@ -30,7 +42,7 @@ body {
   transform: translateZ(10px);
 }
 #target fieldset {
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   min-height: 200px;
   padding: 5px;
   padding-bottom: 30px;
@@ -107,10 +119,11 @@ form .popover form {
 
 .target:after{
   float:left;
-  content: " ";
-  height: 77px;
-  margin-top: 3px;
-  background: #f0f0f0;
+  content: "";
+  height: 70px;
+  margin-top: 15px;
+  z-index: 1;
+  background: transparent;;
   width: 100%;
   border: 1px dashed #ccc;
 }
