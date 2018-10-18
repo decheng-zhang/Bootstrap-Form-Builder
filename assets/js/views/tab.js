@@ -19,6 +19,67 @@ define([
        }
       this.render();
     }
+    , appendSchemaListFromOneDb: function(Dbname){
+
+
+            $.couch.urlPrefix = "http://localhost:5984"
+            $.couch.db(Dbname).view("atlas/schemas", {
+              success:function(data){
+                if( typeof data["rows"] === 'undefined'
+                  || data["rows"].length < 1){
+                  return;
+                }
+                var name = name
+                _.chain(data["rows"])
+                .filter( function(sches){
+                  return sches["id"].startsWith("schema")
+                })
+                .tap( function(schess){ schess.forEach(function(scheitem){
+
+                  $.couch.db(Dbname).openDoc(scheitem["id"],{
+                    success: function(data){
+                      if(typeof data["definition"] === "undefined"){
+                        return;
+                      }
+                      new SchemaListItemView({model: new Backbone.Model(data["definition"])
+                                             })
+                    },
+                    error: function(status){
+                      console.log("doc not exist")
+                    }
+                  })
+                })
+              })
+              }
+              ,error: function(status)  {
+                console.log(status);
+              }
+              ,reduce:false
+            })
+
+
+
+    }
+     , appendSchemaListFromDb : function(){
+       var that = this;
+       $(this).find("ul.dropdown-menu#dropdown-menu-for-schemas").empty()
+       $.couch.urlPrefix = "http://localhost:5984"
+       $.couch.allDbs({
+         success: function(data) {
+           data = data || {}
+
+           _.chain(data)
+           .filter( function(dbname){
+             return !dbname.startsWith("_")
+           })
+           .tap( function(dbs){ dbs.forEach(function(db){
+             that.appendSchemaListFromOneDb(db)
+           })
+         })
+        }
+    });
+
+     }
     , render: function(){
       // Render Snippet Views
       var that = this;
@@ -31,35 +92,7 @@ define([
       } else if(that.options.dropdown){
 
           $("li.dropdown#"+that.id).append(that.options.content);
-          $("li.dropdown#"+that.id).on("click", function(){
-                $(this).find("ul.dropdown-menu#dropdown-menu-for-schemas").empty()
-                $.couch.urlPrefix = "http://localhost:5984"
-                $.couch.db("demo").view("atlas/schemas", {
-                  success:function(data){
-                    _.chain(data["rows"])
-                    .filter( function(sches){
-                      return sches["id"].startsWith("schema")
-                    })
-                    .tap( function(schess){ schess.forEach(function(scheitem){
-                      $.couch.db("demo").openDoc(scheitem["id"],{
-                        success: function(data){
-                          new SchemaListItemView({model: new Backbone.Model(data["definition"])})
-                        },
-                        error: function(status){
-                          console.log("doc not exist")
-                        }
-                      })
-                    })
-                  })
-                  }
-                  ,error: function(status)  {
-                    console.log(status);
-                  }
-                  ,reduce:false
-                })
-
-
-          })
+          $("li.dropdown#"+that.id).on("click", that.appendSchemaListFromDb() )
       } else if (that.options.content){
         that.$el.append(that.options.content);
       }

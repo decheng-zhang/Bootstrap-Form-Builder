@@ -13,7 +13,22 @@ body {
 #components {
   min-height: 500px;
 }
-
+.component{
+  width: 480px;
+  height: 40px;
+  padding: 20px;
+  margin: auto;
+  background: #FFF;
+  margin-top: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+.component:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.3s;
+  transform: translateZ(10px);
+}
 #target fieldset {
   border: 1px solid #ccc;
   min-height: 200px;
@@ -32,6 +47,7 @@ input {
 textarea {
   resize: vertical;
 }
+
 
 .popover {
   z-index: 9999999;
@@ -92,7 +108,7 @@ form .popover form {
 .target:after{
   float:left;
   content: " ";
-  height: 77px; 
+  height: 77px;
   margin-top: 3px;
   background: #f0f0f0;
   width: 100%;

@@ -59,9 +59,20 @@ define([
           var $ele = $(ele)
           , type = $ele.attr("type")
           , name = $ele.attr("n2id");
-          if( type === "info-input"){
-            boundContext.model.setField(name, $ele.val());
+          switch(type){
+            case "info-input":
+              boundContext.model.setField(name, $ele.val());
+              break;
+            case "info-input-textarea":
+               boundContext.model.setField(name,
+                 _.chain($ele.val().split("\n"))
+                 .map(function(t){return $.trim(t)})
+                 .filter(function(t){return t.length > 0})
+                 .value()
+               );
+               break;
           }
+
         });
         boundContext.model.trigger("change");
       }

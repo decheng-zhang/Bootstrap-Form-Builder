@@ -22,7 +22,7 @@ define([
 ){
   return Backbone.View.extend({
     tagName: "div"
-    , className: "component" 
+    , className: "component"
       , initialize: function(){
 	 // console.log("which two problem: " , this.model.idFriendlyTitle() + "html")
       var templatehtmlfile = _snippetTemplates[this.model.idFriendlyTitle()+ "html"] || _snippetTemplates["n2attributedefaulthtml"]
@@ -44,10 +44,13 @@ define([
         "popoverTemplates": that.popoverTemplates
       });
 	//console.log("which one problem: " , this.model.idFriendlyTitle())
-	
+
 	if (withAttributes) {
-        var templatefile = _snippetTemplates[this.model.idFriendlyTitle()] || _snippetTemplates["n2attributedefault"]
-	    var jsonContent =  _.template(templatefile)(that.model.getValues());
+    //
+        var templatefile =  _snippetTemplates[this.model.idFriendlyTitle()] || _snippetTemplates["n2attributedefault"]
+        var objVal= that.model.getValues()
+        objVal = _.extend(objVal, {id : objVal["n2id"]})
+	    var jsonContent =  _.template(templatefile)(_.omit(objVal, "n2id"));
             return this.$el.html(
             that.template(that.model.getValues())
         ).attr({

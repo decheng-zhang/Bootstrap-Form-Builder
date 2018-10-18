@@ -86,7 +86,7 @@
         "value": "id"
       },
       "label": {
-        "label": "label",
+        "label": "Label",
         "type": "input",
         "value": "Label"
       }
@@ -137,6 +137,11 @@
         "label": "label",
         "type": "input",
         "value": "Label"
+      },
+      "referenceType": {
+        "label": "Reference Type",
+        "type": "input",
+        "value": null
       },
       "searchFunction": {
         "label": "Search Function",
@@ -248,6 +253,186 @@
             "selected": false
           }
         ]
+      }
+    }
+  },
+  {
+    "title": "n2 attribute localized",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "localized"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute date",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "date"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute file",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "file"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute geometry",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "geometry"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute hover sound",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "hover_sound"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute createdBy",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "createdBy"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute createdTime",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "createdTime"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute custom",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "custom"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
+      }
+    }
+  },
+  {
+    "title": "n2 attribute textarea",
+    "fields": {
+      "type": {
+        "label": "type",
+        "type": "string",
+        "value": "textarea"
+      },
+      "n2id": {
+        "label": "id",
+        "type": "string",
+        "value": "id"
+      },
+      "label": {
+        "label": "label",
+        "type": "input",
+        "value": "Label"
       }
     }
   }

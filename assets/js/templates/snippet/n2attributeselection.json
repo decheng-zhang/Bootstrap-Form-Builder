@@ -1,5 +1,5 @@
     "type" : "<%- type %>"
-    ,"id"  : "<%- n2id %>"
+    ,"id"  : "<%- id %>"
     ,"label" : "<%- label %>"
     ,"options" : [<% _.each(options, function(option, idx, list) { %>
 	      {

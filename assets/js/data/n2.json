@@ -26,6 +26,20 @@
         "label": "Label",
         "type": "input",
         "value": "label"
+      },
+      "initialLayers": {
+        "label": "initialLayers",
+        "type": "textarea",
+        "value": [
+
+        ]
+      },
+      "relatedSchemas": {
+        "label": "relatedSchemas",
+        "type": "textarea",
+        "value": [
+
+        ]
       }
     }
   }

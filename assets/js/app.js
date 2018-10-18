@@ -31,7 +31,7 @@ define([
         , content: aboutTab
       });
     new TabView({
-            title: "LoadingSchemas"
+            title: "Loading Schemas"
             , content: loadingTab
             , dropdown: true
           });

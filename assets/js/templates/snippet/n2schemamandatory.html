@@ -14,7 +14,8 @@
         <input id="id"
 	   class="span4 field"
 	   name = "<%- 'id-'+id %>"
-    	   value="<%- id %>"
+    	   value="<%- n2id %>"
+         n2id = "n2id"
     	   type="info-input"
 	   placeholder="SchemaId">
 
@@ -32,6 +33,21 @@
     />
 
   </div>
+</div>
+
+
+<div>
+  <label class='control-label' for="initialLayers"> InitialLayers </label>
+  <div class = "controls">
+  <textarea class="span2 field" type="info-input-textarea" data-type="<%- type %>" style='min-height: 40px' n2id="initialLayers"><% for ( var i = 0; i < initialLayers.length ; i++ ) { %><%- initialLayers[i] %><% if (i < initialLayers.length - 1) { %><%- "\n" %><% } %><% } %></textarea>
+</div>
+</div>
+
+<div>
+  <label class='control-label' for="relatedSchemas"> RelatedSchemas </label>
+  <div class = "controls">
+  <textarea class="span2 field" type="info-input-textarea" data-type="<%- type %>" style='min-height: 40px' n2id="relatedSchemas"><% for ( var i = 0; i < relatedSchemas.length ; i++ ) { %><%- relatedSchemas[i] %><% if (i < relatedSchemas.length - 1) { %><%- "\n" %><% } %><% } %></textarea>
+</div>
 </div>
   <!-- attribute box -->
 

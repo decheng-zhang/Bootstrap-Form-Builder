@@ -29,7 +29,7 @@ define([
 
     }
     , handleLoadingSchema : function(model){
-        this.collection.readRapeSnippets();
+        this.collection.readRapeSnippets(model.toJSON());
 
     }
 

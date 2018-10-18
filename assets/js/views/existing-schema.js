@@ -18,7 +18,8 @@ define([
     }
     , render: function(){
       var that = this;
-      this.$el.html(that.template({id : that.model.get("id")
+      //console.log(that.dbname)
+      this.$el.html(that.template({ id : that.model.get("id")
         , group: that.model.get("group")}))
       this.$el.appendTo("ul.dropdown-menu#dropdown-menu-for-schemas")
 

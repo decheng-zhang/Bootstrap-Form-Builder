@@ -50,7 +50,7 @@ define([
           }
           break;
         case "textarea":
-          fields[name]["value"] = value
+          fields[name]["value"] = JSON.parse(JSON.stringify(value))
           this.set("fields", fields);
           break;
         case "textarea-split":

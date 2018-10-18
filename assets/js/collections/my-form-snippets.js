@@ -65,12 +65,12 @@ define([
         return snippet.attributes.title === "File Button"
       }) === "undefined");
     }
-    , readRapeSnippets: function(){
+    , readRapeSnippets: function(modelJSON){
        // var waitingDialog = Waitingfor.constructDialog();
         waitingDialog.show();
         setTimeout(function(){waitingDialog.hide();},1500)
 	    this.reset();
-      var rapeSnippets = JSON.parse(testRape);
+      var rapeSnippets = modelJSON;
       var infoSnippetJson = JSON.parse(n2mandatoryJSON);
       var attrSnippetJson = JSON.parse(attributesJSON);
       var attrBoolSnippetInstance = JSON.parse(n2AttrBoolean) [0]

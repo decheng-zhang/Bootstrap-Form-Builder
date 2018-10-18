@@ -1,5 +1,5 @@
     "type" : "<%- type %>"
-    ,"id"  : "<%- n2id %>"
+    ,"id"  : "<%- id %>"
     ,"label" : "<%- label %>"
     ,"checkboxes" : [<% _.each(checkboxes, function(checkbox, idx, list) { %>
 	      {

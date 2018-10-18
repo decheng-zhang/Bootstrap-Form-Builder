@@ -103,7 +103,7 @@
     referenceType:
       label : Reference Type
       type : input
-      value : 
+      value :
     searchFunction:
       label : Search Function
       type  : select
@@ -305,6 +305,21 @@
       value : custom
     n2id:
       label: id
+      type : string
+      value : id
+    label:
+      label : label
+      type : input
+      value : Label
+-
+  title: n2 attribute textarea
+  fields:
+    type:
+      label : type
+      type : string
+      value : textarea
+    n2id:
+      label : id
       type : string
       value : id
     label:
