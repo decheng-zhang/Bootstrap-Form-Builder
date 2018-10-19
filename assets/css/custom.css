@@ -173,17 +173,17 @@ form .popover form {
   margin-right: 10px
 }
 
-.target:after{
+.target::after{
   float:left;
-  content: "  ";
-  display: contents;
+  content: " ";
+  display: block;
   height: 70px;
   margin-top: 3px;
-  position:relative;
+  position: relative;
   z-index: -1;
   background: #f0f0f0;
   width: 100%;
-  border: 2px dashed #ccc;
+  border: 2px dashed #d1d1d1;
 }
 
 #target, #input, #radioscheckboxes, #select, #buttons {
