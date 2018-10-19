@@ -27,9 +27,11 @@ body {
 }
 .component{
   max-width: 400px;
-  height: 40px;
+  display: block;
+  height: auto;
   padding: 20px;
   margin: auto;
+  margin-bottom: 10px;
   background: #FFF;
   margin-top: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -119,13 +121,15 @@ form .popover form {
 
 .target:after{
   float:left;
-  content: "";
+  content: "  ";
+  display: contents;
   height: 70px;
-  margin-top: 15px;
-  z-index: 1;
-  background: transparent;;
+  margin-top: 3px;
+  position:relative;
+  z-index: -1;
+  background: #f0f0f0;
   width: 100%;
-  border: 1px dashed #ccc;
+  border: 2px dashed #ccc;
 }
 
 #target, #input, #radioscheckboxes, #select, #buttons {
