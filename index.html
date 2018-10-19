@@ -2,17 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Nunaliit Schema Builder</title>
+    <title>Bootstrap Form Builder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
 
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -24,25 +26,16 @@
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
+
         <div class="container">
           <a class="brand" href="#">Nunaliit Schema Builder</a>
         </div>
+
       </div>
     </div>
     <div class="container">
       <div class="row clearfix">
-        <!-- Building Form. -->
-        <div class="span6">
-          <div class="clearfix">
-            <h2>Your Schema</h2>
-            <hr>
-            <div id="build">
-              <form id="target" class="form-horizontal">
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- / Building Form. -->
+
 
         <!-- Components -->
         <div class="span6">
@@ -62,21 +55,33 @@
           </div>
         </div>
         <!-- / Components -->
+	<!-- Building Form. -->
+        <div class="span6">
+          <div class="clearfix">
+			<div class="row-fluid">
+				<div class="span6">
+            		<h2>Your Schema</h2>
+				</div>
+				<div class="span6">
+					<p>
+					<button class="btn btn-danger pull-right schemsubmit" type="button">Submit</button>
+				</div>
 
+		</div>
+			<hr>
+            <div id="build">
+              <form id="target" class="form-horizontal">
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- / Building Form. -->
       </div>
-      
-
 
 
     </div> <!-- /container -->
 
-    <script data-main="assets/js/main-built.js" src="assets/js/lib/require.js" ></script>
+    <script data-main="assets/js/main-build.js" src="assets/js/lib/require.js" ></script>
 
-    <!-- /definision.js for test -->
-
-    
-    <!-- --> 
-
-    
   </body>
 </html>
