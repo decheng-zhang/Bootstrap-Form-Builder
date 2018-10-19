@@ -32,7 +32,7 @@ define([
                 var name = name
                 _.chain(data["rows"])
                 .filter( function(sches){
-                  return sches["id"].startsWith("schema")
+                  return !sches["id"].startsWith("org.nunaliit")
                 })
                 .tap( function(schess){ schess.forEach(function(scheitem){
 
@@ -61,9 +61,9 @@ define([
 
     }
      , appendSchemaListFromDb : function(){
-        
+
        var that = this;
-       $(this).find("ul.dropdown-menu#dropdown-menu-for-schemas").empty()
+       $("ul.dropdown-menu#dropdown-menu-for-schemas").empty()
        $.couch.urlPrefix = "http://localhost:5984"
        $.couch.allDbs({
          success: function(data) {
@@ -92,8 +92,8 @@ define([
         });
       } else if(that.options.dropdown){
 
-          $("li.dropdown#"+that.id).append(that.options.content);
-          $("li.dropdown#"+that.id).on("click", function(event) {
+          $("li.dropdown#"+that["id"]).append(that.options.content);
+          $("li.dropdown#"+that["id"]).on("click", function(event) {
               event.preventDefault();
               that.appendSchemaListFromDb()
           } )

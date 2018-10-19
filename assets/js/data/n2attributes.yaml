@@ -8,7 +8,7 @@
     n2id:
       label : Id
       type : string
-      value : id
+      value :
     label:
       label : Label
       type : input
@@ -23,7 +23,7 @@
     n2id:
       label : Id
       type : string
-      value : id
+      value :
     label:
       label : Label
       type : input
@@ -42,7 +42,7 @@
     n2id:
       label : Id
       type  : string
-      value : id
+      value :
     label:
       label : Label
       type  : input
@@ -61,7 +61,7 @@
     n2id:
       label : Id
       type  : string
-      value : id
+      value :
     label:
       label : Label
       type : input
@@ -76,7 +76,7 @@
     n2id:
       label : Id
       type  : string
-      value : id
+      value :
     label:
       label : Label
       type  : input
@@ -95,7 +95,7 @@
     n2id:
       label : Id
       type  : string
-      value : id
+      value :
     label:
       label : label
       type  : input
@@ -166,7 +166,7 @@
     n2id:
       label : Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -201,7 +201,7 @@
     n2id:
       label : Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -216,7 +216,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -231,7 +231,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -246,7 +246,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -261,7 +261,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -276,7 +276,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -291,7 +291,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -306,7 +306,7 @@
     n2id:
       label: Id
       type : string
-      value : id
+      value :
     label:
       label : label
       type : input
@@ -321,7 +321,7 @@
     n2id:
       label : Id
       type : string
-      value : id
+      value : 
     label:
       label : label
       type : input

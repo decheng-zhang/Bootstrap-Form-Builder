@@ -4,6 +4,7 @@ define([
   return Backbone.Model.extend({
     initialize: function() {
       this.set("fresh", true);
+      this.set("fromDb", false);
     }
     , getValues: function(){
       return _.reduce(this.get("fields"), function(o, v, k){

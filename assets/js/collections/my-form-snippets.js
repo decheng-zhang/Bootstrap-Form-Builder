@@ -98,6 +98,7 @@ define([
           var newCandidateSnippetModel =JSON.parse(JSON.stringify(candidateSnippetModel))
           var candidateSnippetInstance = new SnippetModel(newCandidateSnippetModel);
           candidateSnippetInstance.set("fresh", false);
+          candidateSnippetInstance.set("fromDb", true);
           var newAttrBoolSnippetInstance = JSON.parse(JSON.stringify(attrBoolSnippetInstance))
           candidateSnippetInstance.mergeField(new Backbone.Model(newAttrBoolSnippetInstance));
           _.each(_.keys(attr), function(fieldname){

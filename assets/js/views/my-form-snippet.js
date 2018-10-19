@@ -25,6 +25,7 @@ define([
 	      this.$el.popover("show");
 	      $(".popover #save").on("click", this.saveHandler(that));
 	      $(".popover #cancel").on("click", this.cancelHandler(that));
+        $(".popover .n2id-label-in-popover").on("click", this.updateN2id(that));
         $("body").on("mousemove", function(mouseMoveEvent){
 		  if(
 		      Math.abs(mouseDownEvent.pageX - mouseMoveEvent.pageX) > 10 ||
@@ -78,7 +79,22 @@ define([
       }
 
     }
+    , updateN2id :function(boundContext ) {
+      return function(mouseEvent) {
+        mouseEvent.preventDefault();
 
+        var fields = $(".popover .field");
+         var labelInputField = _.find(fields, function(field){
+          return $(field).attr("id") ==="label"
+        });
+         var  idFromLabel = $(labelInputField).val().toLowerCase().replace(/\W/g,'');
+
+        var n2idInputField = _.find(fields,function(e){
+          return $(e).attr("id") === "n2id";
+        });
+        $(n2idInputField).html(idFromLabel)
+      }
+    }
     , saveHandler : function(boundContext) {
       return function(mouseEvent) {
         mouseEvent.preventDefault();
@@ -90,6 +106,10 @@ define([
           , name = $e.attr("id");
 
           switch(type) {
+            case "string":
+               console.log($e.html())
+               boundContext.model.setField(name, $e.html());
+               break;
             case "checkbox":
               boundContext.model.setField(name, $e.is(":checked"));
               break;

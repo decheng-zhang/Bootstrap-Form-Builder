@@ -10,7 +10,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "Label",
@@ -30,7 +30,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "Label",
@@ -55,7 +55,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "Label",
@@ -83,7 +83,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "Label",
@@ -103,7 +103,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "Label",
@@ -131,7 +131,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -221,7 +221,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -267,7 +267,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -287,7 +287,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -307,7 +307,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -327,7 +327,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -347,7 +347,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -367,7 +367,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -387,7 +387,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -407,7 +407,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
@@ -427,7 +427,7 @@
       "n2id": {
         "label": "Id",
         "type": "string",
-        "value": "id"
+        "value": null
       },
       "label": {
         "label": "label",
