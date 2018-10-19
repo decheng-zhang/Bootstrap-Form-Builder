@@ -61,6 +61,7 @@ define([
 
     }
      , appendSchemaListFromDb : function(){
+        
        var that = this;
        $(this).find("ul.dropdown-menu#dropdown-menu-for-schemas").empty()
        $.couch.urlPrefix = "http://localhost:5984"
@@ -92,7 +93,10 @@ define([
       } else if(that.options.dropdown){
 
           $("li.dropdown#"+that.id).append(that.options.content);
-          $("li.dropdown#"+that.id).on("click", that.appendSchemaListFromDb() )
+          $("li.dropdown#"+that.id).on("click", function(event) {
+              event.preventDefault();
+              that.appendSchemaListFromDb()
+          } )
       } else if (that.options.content){
         that.$el.append(that.options.content);
       }

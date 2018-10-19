@@ -27,8 +27,26 @@
 	<%= optcompiled %>
       </div>
       <div class="tab-pane" id="third">
-	custom
-      </div>
+        <div class="controls" > 
+                    <div class="input-append">
+                        <input id="field1" class="input-medium field" name="prof1" type="text" placeholder="Give something new"/>
+                        <button id="b1" class="btn btn-info add-more" type="button">+</button>
+                    </div>
+                <br>
+                <small>Press + to add another field :)</small>
+        </div>
+        <script>
+            var next = 1;
+        $(".add-more").click(function(e){
+            e.preventDefault();
+            var addto="#field"+next;
+            next +=1;
+            var newIn = '<br /><br /><input class="input-medium field" id="field' + next + '" name="field' + next + '" type="text" >';
+            var newInput = $(newIn);
+            $(addto).after(newInput);
+        })
+        </script>
+     </div>
     </div>
     <hr/>
     <button id="save" class='btn btn-info'>Save</button><button id="cancel" class='btn btn-danger'>Cancel</button>
