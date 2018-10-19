@@ -199,7 +199,7 @@
       type : string
       value: localized
     n2id:
-      label : id
+      label : Id
       type : string
       value : id
     label:
@@ -214,7 +214,7 @@
       type : string
       value : date
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -229,7 +229,7 @@
       type : string
       value : file
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -244,7 +244,7 @@
       type : string
       value : geometry
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -259,7 +259,7 @@
       type : string
       value : hover_sound
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -274,7 +274,7 @@
       type : string
       value : createdBy
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -289,7 +289,7 @@
       type : string
       value : createdTime
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -304,7 +304,7 @@
       type : string
       value : custom
     n2id:
-      label: id
+      label: Id
       type : string
       value : id
     label:
@@ -319,7 +319,7 @@
       type : string
       value : textarea
     n2id:
-      label : id
+      label : Id
       type : string
       value : id
     label:

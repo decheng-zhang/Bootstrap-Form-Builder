@@ -265,7 +265,7 @@
         "value": "localized"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -285,7 +285,7 @@
         "value": "date"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -305,7 +305,7 @@
         "value": "file"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -325,7 +325,7 @@
         "value": "geometry"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -345,7 +345,7 @@
         "value": "hover_sound"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -365,7 +365,7 @@
         "value": "createdBy"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -385,7 +385,7 @@
         "value": "createdTime"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -405,7 +405,7 @@
         "value": "custom"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },
@@ -425,7 +425,7 @@
         "value": "textarea"
       },
       "n2id": {
-        "label": "id",
+        "label": "Id",
         "type": "string",
         "value": "id"
       },

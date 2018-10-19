@@ -33,7 +33,7 @@ define([
               , "textarea" : _.template(_PopoverTextArea)
               , "textarea-split" : _.template(_PopoverTextAreaSplit)
               , "checkbox" : _.template(_PopoverCheckbox)
-	      ,"string" : _.template(_PopoverString)
+	             ,"string" : _.template(_PopoverString)
 	  }
       }
     , render: function(withAttributes){
