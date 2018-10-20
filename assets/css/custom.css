@@ -14,11 +14,13 @@ body {
   min-height: 500px;
 }
 
+
 #build #target div.component:first-of-type{
   max-width: 480px;
   height : auto;
   padding: 20px;
-  margin: auto;
+  margin-left: 20px;
+  margin-right: 20px ;
   background: #FFF;
   margin-top: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -31,10 +33,12 @@ body {
 .component{
   max-width: 480px;
   display: block;
+  
   position: relative;
   height: 100%;
   padding: 20px;
-  margin: auto;
+  margin-left: 20px;
+  margin-right: 20px ;
   margin-bottom: 10px;
   background: #FFF;
   margin-top: 10px;
@@ -63,7 +67,10 @@ body {
   transform: translateZ(10px);
 }
 
-
+.tab-content {
+    overflow-y: auto;
+    height : 600px;
+}
 
 #target fieldset {
   border: 1px solid #000;
@@ -71,6 +78,7 @@ body {
   padding: 5px;
   padding-bottom: 30px;
 }
+
 
 .component {
   cursor: grab;
@@ -194,8 +202,11 @@ form .popover form {
  -ms-user-select: none;
  user-select: none;
 }
+fieldset{
+    width: 80%;
+}
 
 #target fieldset{
- width: 100%;
  overflow: hidden;
+ margin-right: 20px;
 }

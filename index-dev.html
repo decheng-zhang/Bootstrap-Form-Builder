@@ -63,8 +63,25 @@
             		<h2>Your Schema</h2>
 				</div>
 				<div class="span6">
-					<p>
-					<button class="btn btn-danger pull-right schemsubmit" type="button">Submit</button>
+								
+                    <a href="#myModal" role="button" class="btn btn-danger schemsubmit" data-toggle="modal">Submit</a>
+     
+                    <!-- Modal -->
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">Modal header</h3>
+                      </div>
+                      <div class="modal-body">
+                        <p>!!!!!!!! Get Rid of Vim Now !!!!!!!!</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+
+                    
 				</div>
 
 		</div>

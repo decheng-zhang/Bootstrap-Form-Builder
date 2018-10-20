@@ -22,8 +22,9 @@ define([
       this.$build = $("#build");
       this.renderForm = _.template(_renderForm);
       var that = this;
-      $("button.schemsubmit").on("click", function(){
-        that.collection.readRapeSnippets();
+      $("button.schemsubmit").on("click", function(event){
+          event.preventDefault();
+        //that.collection.readRapeSnippets();
       });
       this.render();
 
