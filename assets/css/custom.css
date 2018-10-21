@@ -37,8 +37,7 @@ body {
   position: relative;
   height: 100%;
   padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px ;
+  margin: auto;
   margin-bottom: 10px;
   background: #FFF;
   margin-top: 10px;
@@ -69,7 +68,7 @@ body {
 
 .tab-content {
     overflow-y: auto;
-    height : 600px;
+    height : 629px;
 }
 
 #target fieldset {
@@ -202,9 +201,7 @@ form .popover form {
  -ms-user-select: none;
  user-select: none;
 }
-fieldset{
-    width: 80%;
-}
+
 
 #target fieldset{
  overflow: hidden;
